@@ -1,25 +1,12 @@
 ﻿Module mod_nJira
 
     'module for all vlingo system JIRAs:
-    'ASRSCI
-    'BLKDG
-    'CEC
-    'LGEVM
-    'LGEVB
-    'MREC
-    'NAC
-    'SAMC
-    'SAQ
-    'SAQE
-    'SDA
-    'STZ
-    'STZE
-    'TXTNRM
-    'VVSCFG
+    'ASRSCI    'BLKDG    'CEC    'LGEVM    'LGEVB    'MREC    'NAC    
+    'SAMC    'SAQ    'SAQE    'SDA    'STZ    'STZE    'TXTNRM    'VVSCFG
 
     Public Sub ASRSCI()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call vlLanguages_1()
         Call vlPlatforms_1()
@@ -64,7 +51,7 @@ ErrHandler3:
 
     Public Sub BLKDG()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
 
         ''block user from non-compatible project
@@ -106,7 +93,7 @@ ErrHandler3:
 
     Public Sub CEC()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
 
         ''block user from non-compatible project
@@ -144,7 +131,7 @@ ErrHandler3:
 
     Public Sub LGEVM()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
 
         ''block user from non-compatible project
@@ -186,7 +173,7 @@ ErrHandler3:
 
     Public Sub LGEVB()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
 
         ''block user from non-compatible project
@@ -352,7 +339,7 @@ ErrHandler3:
 
     Public Sub NAC()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
 
         ''build url
@@ -382,7 +369,7 @@ ErrHandler3:
 
     Public Sub SAMC()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call vlLanguages_1()
         Call vlPlatforms_2()
@@ -422,7 +409,7 @@ ErrHandler3:
 
     Public Sub SAQ()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call vlLanguages_1()
         Call vlPlatforms_2()
@@ -466,7 +453,7 @@ ErrHandler3:
 
     Public Sub SAQE()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call vlLanguages_1()
         Call vlPlatforms_2()
@@ -516,7 +503,7 @@ ErrHandler3:
 
     Public Sub SDA()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call vlLanguages_1()
         Call vlPlatforms_2()
@@ -562,7 +549,7 @@ ErrHandler3:
 
     Public Sub STZ()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call vlLanguages_1()
         Call vlPlatforms_2()
@@ -608,7 +595,7 @@ ErrHandler3:
 
     Public Sub STZE()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call vlLanguages_1()
         Call vlPlatforms_2()
@@ -654,7 +641,7 @@ ErrHandler3:
 
     Public Sub TXTNRM()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call vlLanguages_1()
         Call vlPlatforms_1()
@@ -712,7 +699,7 @@ ErrHandler3:
 
     Public Sub VVSCFG()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call vlLanguages_1()
         Call vlPlatforms_1()

@@ -1,6 +1,6 @@
 ﻿Module mod_controls
 
-    Function getTabIndex()
+    Function getActiveTabIndex()
 
         'checks which tabpage is selected and returns as base 0 index
         Dim currentTabIndex As Int32 = frm_main.TabControl1.SelectedIndex
@@ -27,7 +27,7 @@
 
     Public Sub comment()
 
-        Call setTestEnv()
+        Call setActiveTab()
 
         commentFormat = ""
 
@@ -72,13 +72,13 @@
 
     End Sub
 
-    Public Sub clearSelectedTab()
+    Public Sub clearActiveTab()
 
         Dim response As MsgBoxResult
-        response = MsgBox("This will clear all entries in Server Environment " & getTabIndex() + 1 _
+        response = MsgBox("This will clear all entries in Server Environment " & getActiveTabIndex() + 1 _
                                               & vbCrLf & "Proceed?", MsgBoxStyle.YesNo, "Confirm")
         If response = 6 Then
-            If getTabIndex() = 0 Then
+            If getActiveTabIndex() = 0 Then
                 With frm_main
                     .cbx_project0.Text = ""
                     .cbx_language0.Text = ""
@@ -95,7 +95,7 @@
 
             End If
 
-            If getTabIndex() = 1 Then
+            If getActiveTabIndex() = 1 Then
                 With frm_main
                     .cbx_project1.Text = ""
                     .cbx_language1.Text = ""
@@ -111,7 +111,7 @@
                 End With
             End If
 
-            If getTabIndex() = 2 Then
+            If getActiveTabIndex() = 2 Then
                 With frm_main
                     .cbx_project2.Text = ""
                     .cbx_language2.Text = ""

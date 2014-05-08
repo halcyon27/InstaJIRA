@@ -1,16 +1,17 @@
-﻿Module mod_variables
+﻿Module mod_JIRAvariables
 
-    Public Sub setTestEnv()
+    Public Sub setActiveTab()
 
         'set variables based on selected tabpage
-        If frm_main.TabControl1.SelectedIndex = 0 Then Call testEnv1()
-        If frm_main.TabControl1.SelectedIndex = 1 Then Call testEnv2()
-        If frm_main.TabControl1.SelectedIndex = 2 Then Call testEnv3()
+        If frm_main.TabControl1.SelectedIndex = 0 Then Call activeTab1()
+        If frm_main.TabControl1.SelectedIndex = 1 Then Call activeTab2()
+        If frm_main.TabControl1.SelectedIndex = 2 Then Call activeTab3()
 
     End Sub
 
-    Public Sub testEnv1()
+    Public Sub activeTab1()
 
+        'set variables based on selected tabpage
         project = frm_main.cbx_project0.Text
         automationTest = getAutomationTestType()
         language = frm_main.cbx_language0.Text
@@ -25,8 +26,9 @@
 
     End Sub
 
-    Public Sub testEnv2()
+    Public Sub activeTab2()
 
+        'set variables based on selected tabpage
         project = frm_main.cbx_project1.Text
         automationTest = getAutomationTestType()
         language = frm_main.cbx_language1.Text
@@ -41,8 +43,9 @@
 
     End Sub
 
-    Public Sub testEnv3()
+    Public Sub activeTab3()
 
+        'set variables based on selected tabpage
         project = frm_main.cbx_project2.Text
         automationTest = getAutomationTestType()
         language = frm_main.cbx_language2.Text
@@ -59,8 +62,9 @@
 
     Public Sub vlLanguages_1()
 
-        Call setTestEnv()
+        Call setActiveTab()
 
+        'match the language chosen to code for language used by Jira
         If language = "" Then langID = "10586"
         If language = "en-US" Then langID = "10570"
         If language = "fr-FR" Then langID = "10580"
@@ -79,9 +83,9 @@
     End Sub
 
     Public Sub nLanguages()
-        Call setTestEnv()
+        Call setActiveTab()
 
-        ''match the language chosen to code for language used by Jira
+        'match the language chosen to code for language used by Jira
         If language = "" Then langID = "10015"
         If language = "en-US" Then langID = "10005"
         If language = "fr-FR" Then langID = "10007"
@@ -97,7 +101,7 @@
         If language = "ko-KR" Then langID = "10040"
         If language = "ru-RU" Then langID = "10052"
 
-        ''change language choice to xxx-XXX format for Burlington teams
+        'change language choice to xxx-XXX format for Burlington teams
         If langID = "10015" Then langCode = "N/A"
         If langID = "10005" Then langCode = "eng-USA"
         If langID = "10007" Then langCode = "fra-FRA"
@@ -121,9 +125,9 @@
 
     Public Sub nPlatforms()
 
-        Call setTestEnv()
+        Call setActiveTab()
 
-        'Match the platform chosen to code for platform used by Jira
+        'match the project chosen to code for platform used by Jira
         If project Like "LGEVM*" Then platform = "82249"
         If project = "Blackdog" Then platform = "43090"
         If project = "DMA" Then platform = "43091"
@@ -133,8 +137,9 @@
 
     Public Sub vlPlatforms_1()
 
-        Call setTestEnv()
+        Call setActiveTab()
 
+        'match the project chosen to code for platform used by Jira
         If project = "" Then platform = "10560" 'All
         If project = "Blackdog" Then platform = "10951" 'Samsung Android GS4
         If project = "Bproject" Then platform = "10951" 'Samsung Android GS4
@@ -155,8 +160,9 @@
 
     Public Sub vlPlatforms_2()
 
-        Call setTestEnv()
+        Call setActiveTab()
 
+        'match the project chosen to code for platform used by Jira
         If project = "" Then platform = "-1" 'None
         If project = "Blackdog" Then platform = "10952" 'Samsung Android GS4
         If project = "Bproject" Then platform = "10952" 'Samsung Android GS4
@@ -178,7 +184,7 @@
     Public Sub serverEnv_nlps()
         ''used for blkdg, Evermore, lgevm
 
-        Call setTestEnv()
+        Call setActiveTab()
 
         ''connect choice of language and project to applicable server environment
         If language = "en-US" Then nServerEnv = "mtl-pe59-vm3.nuance.com"
@@ -205,7 +211,7 @@
 
     Public Sub serverEnv_ss()
 
-        Call setTestEnv()
+        Call setActiveTab()
 
         ''Match project and server to SAQE options (id="customfield_11182")
         If serverEnv = "" Then serverEnv = "11558" '<option value="11558">Unknown (Production)</option>
@@ -244,7 +250,6 @@
             MsgBox(serverEnv & " is not a valid choice for SAQE; reverting to 'Unknown'." _
             & vbCrLf & "Please verify server before opening the JIRA.")
         End If
-
 
     End Sub
 

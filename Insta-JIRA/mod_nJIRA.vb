@@ -2,7 +2,7 @@
 
     Public Sub Evermore()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call nLanguages()
         Call nPlatforms()
@@ -51,7 +51,7 @@ ErrHandler3:
 
     Public Sub ZPACC()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call nLanguages()
         Call nPlatforms()
@@ -112,7 +112,7 @@ ErrHandler3:
 
     Public Sub ZPADK()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call nLanguages()
         Call nPlatforms()
@@ -172,7 +172,7 @@ ErrHandler3:
 
     Public Sub ZPADRCLINT()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call nLanguages()
         Call nPlatforms()
@@ -232,7 +232,7 @@ ErrHandler3:
 
     Public Sub ZPGNL()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call nLanguages()
         Call nPlatforms()
@@ -293,7 +293,7 @@ ErrHandler3:
 
     Public Sub ZPNLPS()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call nLanguages()
         Call nPlatforms()
@@ -356,7 +356,7 @@ ErrHandler3:
 
         Dim url As Object
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call nLanguages()
         Call nPlatforms()
@@ -417,7 +417,7 @@ ErrHandler3:
 
     Public Sub ZPUDSS()
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call descriptions()
         Call nLanguages()
         Call nPlatforms()

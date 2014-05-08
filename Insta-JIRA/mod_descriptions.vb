@@ -3,7 +3,7 @@
     Public Sub descriptions()
         ''use for asrsci, cec,
 
-        Call setTestEnv()
+        Call setActiveTab()
         Call nLanguages()
 
         ''add additional project-specific lines

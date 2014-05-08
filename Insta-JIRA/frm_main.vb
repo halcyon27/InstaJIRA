@@ -42,7 +42,7 @@
             '.saveDeviceInfo0 = Me.tbx_deviceInfo0.Text
             'TAB TWO
             .saveProject1 = Me.cbx_project1.Text
-            .saveProject0 = Me.cbx_language1.Text
+            .saveLanguage1 = Me.cbx_language1.Text
             .saveTestSource1 = Me.tbx_testSource1.Text
             .saveBuildPath1 = Me.tbx_buildPath1.Text
             .saveBuildVersion1 = Me.tbx_buildVersion1.Text
@@ -71,6 +71,7 @@
     Private Sub frm_Main_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
         'RESTORED SAVED SETTINGS
+
         'TAB ONE
         Me.cbx_project0.Text = My.Settings.saveProject0
         Me.cbx_language0.Text = My.Settings.saveLanguage0
@@ -79,22 +80,24 @@
         Me.tbx_buildVersion0.Text = My.Settings.saveBuildVersion0
         Me.cbx_serverEnv0.Text = My.Settings.saveServerEnv0
         'Me.tbx_host0.Text = My.Settings.saveHost0
-        Me.tbx_software0.Text = My.Settings.saveSoftware0
+        'Me.tbx_software0.Text = My.Settings.saveSoftware0
         Me.tbx_datapack0.Text = My.Settings.saveDatapack0
         Me.cbx_diNumber0.Text = My.Settings.saveDiNumber0
         'Me.tbx_deviceInfo0.Text = My.Settings.saveDeviceInfo0
+
         'TAB TWO
         Me.cbx_project1.Text = My.Settings.saveProject1
-        Me.cbx_language1.Text = My.Settings.saveProject0
+        Me.cbx_language1.Text = My.Settings.saveLanguage1
         Me.tbx_testSource1.Text = My.Settings.saveTestSource1
         Me.tbx_buildPath1.Text = My.Settings.saveBuildPath1
         Me.tbx_buildVersion1.Text = My.Settings.saveBuildVersion1
         Me.cbx_serverEnv1.Text = My.Settings.saveServerEnv1
         'Me.tbx_host1.Text = My.Settings.saveHost1
-        Me.tbx_software1.Text = My.Settings.saveSoftware1
+        'Me.tbx_software1.Text = My.Settings.saveSoftware1
         Me.tbx_datapack1.Text = My.Settings.saveDatapack1
         Me.cbx_diNumber1.Text = My.Settings.saveDiNumber1
         'Me.tbx_deviceInfo1.Text = My.Settings.saveDeviceInfo1
+
         'TAB THREE
         Me.cbx_project2.Text = My.Settings.saveProject2
         Me.cbx_language2.Text = My.Settings.saveLanguage2
@@ -103,7 +106,7 @@
         Me.tbx_buildVersion2.Text = My.Settings.saveBuildVersion2
         Me.cbx_serverEnv2.Text = My.Settings.saveServerEnv2
         'Me.tbx_host2.Text = My.Settings.saveHost2
-        Me.tbx_software2.Text = My.Settings.saveSoftware2
+        'Me.tbx_software2.Text = My.Settings.saveSoftware2
         Me.tbx_datapack2.Text = My.Settings.saveDatapack2
         Me.cbx_diNumber2.Text = My.Settings.saveDiNumber2
         'Me.tbx_deviceInfo2.Text = My.Settings.saveDeviceInfo2
@@ -140,7 +143,7 @@
             .Add("Jproject")
             .Add("Kproject")
             .Add("Midas")
-            .Add("QA")
+            .Add("Q2")
             .Add("Tizen")
             .Add("LGEVM G2")
             .Add("LGEVM B2")
@@ -150,12 +153,12 @@
             .Add("MTLDEV02")
             .Add("MTLDEV03")
             .Add("MTLDEV04")
+            .Add("MTLDEV05")
             .Add("CVT2")
-            .Add("CVT2")
+            .Add("CVT3")
             .Add("PROD")
             .Add("QADMZ")
-            .Add("QATEST3 (DMZ)")
-            .Add("QATEST")
+            .Add("QATEST3")
             .Add("QATEST")
             .Add("SS DEMO")
             .Add("SS TEST")
@@ -191,7 +194,7 @@
             .Add("Jproject")
             .Add("Kproject")
             .Add("Midas")
-            .Add("QA")
+            .Add("Q2")
             .Add("Tizen")
             .Add("LGEVM G2")
             .Add("LGEVM B2")
@@ -201,12 +204,12 @@
             .Add("MTLDEV02")
             .Add("MTLDEV03")
             .Add("MTLDEV04")
+            .Add("MTLDEV05")
             .Add("CVT2")
-            .Add("CVT2")
+            .Add("CVT3")
             .Add("PROD")
             .Add("QADMZ")
-            .Add("QATEST3 (DMZ)")
-            .Add("QATEST")
+            .Add("QATEST3")
             .Add("QATEST")
             .Add("SS DEMO")
             .Add("SS TEST")
@@ -242,7 +245,7 @@
             .Add("Jproject")
             .Add("Kproject")
             .Add("Midas")
-            .Add("QA")
+            .Add("Q2")
             .Add("Tizen")
             .Add("LGEVM G2")
             .Add("LGEVM B2")
@@ -252,17 +255,20 @@
             .Add("MTLDEV02")
             .Add("MTLDEV03")
             .Add("MTLDEV04")
+            .Add("MTLDEV05")
             .Add("CVT2")
-            .Add("CVT2")
+            .Add("CVT3")
             .Add("PROD")
             .Add("QADMZ")
-            .Add("QATEST3 (DMZ)")
-            .Add("QATEST")
+            .Add("QATEST3")
             .Add("QATEST")
             .Add("SS DEMO")
             .Add("SS TEST")
             .Add("VLINGO DEMO")
         End With
+
+        'refresh server software and device info
+        Me.btn_refresh.PerformClick()
 
     End Sub
 
@@ -274,7 +280,14 @@
 
     Private Sub btn_clear_Click(sender As System.Object, e As System.EventArgs) Handles btn_clear.Click
 
-        Call clearSelectedTab()
+        Call clearActiveTab()
+
+    End Sub
+
+    Private Sub btn_refresh_Click(sender As System.Object, e As System.EventArgs) Handles btn_refresh.Click
+
+        Call setGetSoftwareByServerEnv()
+        Call getDeviceInfo()
 
     End Sub
 

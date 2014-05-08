@@ -135,11 +135,11 @@
     </Compile>
     <Compile Include="mod_getSoftware.vb" />
     <Compile Include="mod_getDeviceInfo.vb" />
-    <Compile Include="mod_nJIRA.vb" />
+    <Compile Include="mod_nJira.vb" />
     <Compile Include="mod_descriptions.vb" />
     <Compile Include="mod_declarations.vb" />
-    <Compile Include="mod_variables.vb" />
-    <Compile Include="mod_vJIRA.vb" />
+    <Compile Include="mod_JiraVariables.vb" />
+    <Compile Include="mod_vJira.vb" />
     <Compile Include="mod_controls.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -156,6 +156,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frm_comment.resx">

@@ -159,8 +159,8 @@ Partial Class frm_main
         '
         Me.LinksToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripMenuItem4})
         Me.LinksToolStripMenuItem.Name = "LinksToolStripMenuItem"
-        Me.LinksToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
-        Me.LinksToolStripMenuItem.Text = "Resources"
+        Me.LinksToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.LinksToolStripMenuItem.Text = "File"
         '
         'ToolStripMenuItem2
         '
@@ -473,6 +473,7 @@ Partial Class frm_main
         'tbx_host0
         '
         Me.tbx_host0.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.tbx_host0.Enabled = False
         Me.tbx_host0.Location = New System.Drawing.Point(316, 16)
         Me.tbx_host0.Name = "tbx_host0"
         Me.tbx_host0.Size = New System.Drawing.Size(297, 20)
@@ -1197,7 +1198,7 @@ Partial Class frm_main
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frm_main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "d"
+        Me.Text = "Insta-JIRA"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.gbx_controls.ResumeLayout(False)
