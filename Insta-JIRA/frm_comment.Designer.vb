@@ -47,7 +47,7 @@ Partial Class frm_comment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(520, 167)
+        Me.ClientSize = New System.Drawing.Size(520, 164)
         Me.Controls.Add(Me.btn_commentClose)
         Me.Controls.Add(Me.tbx_comment)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow

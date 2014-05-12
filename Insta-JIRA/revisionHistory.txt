@@ -1,0 +1,13 @@
+﻿InstaJIRA revision history
+
+5/13/2014
+	
+
+5/12/2014
+	v. 2.0.0.7
+	v. 2.0.0.6
+		connected to deviceMasterList.xlsm on QA Collab SharePoint
+	v. 2.0.0.5
+		added support for new chinese languages to nJIRA
+		corrected spelling of Grammar Reqest Form
+		added btn_evermore to frm_main.frm_nJira

@@ -27,13 +27,18 @@ Partial Class frm_main
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DatapackMappingTableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ServerEnvForQAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InstaJIRAWikiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportABugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InstaJIRAWikiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RevisionHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.gbx_controls = New System.Windows.Forms.GroupBox()
         Me.btn_nJira = New System.Windows.Forms.Button()
         Me.btn_clear = New System.Windows.Forms.Button()
-        Me.btn_refresh = New System.Windows.Forms.Button()
+        Me.btn_update = New System.Windows.Forms.Button()
         Me.btn_comment = New System.Windows.Forms.Button()
         Me.btn_vJira = New System.Windows.Forms.Button()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
@@ -125,6 +130,8 @@ Partial Class frm_main
         Me.cbx_project2 = New System.Windows.Forms.ComboBox()
         Me.tbx_testSource2 = New System.Windows.Forms.TextBox()
         Me.Label33 = New System.Windows.Forms.Label()
+        Me.gbx_deviceList = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.gbx_controls.SuspendLayout()
         Me.gbx_automation.SuspendLayout()
@@ -144,6 +151,7 @@ Partial Class frm_main
         Me.gbx_server2.SuspendLayout()
         Me.gbx_apk2.SuspendLayout()
         Me.gbx_general2.SuspendLayout()
+        Me.gbx_deviceList.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -157,7 +165,7 @@ Partial Class frm_main
         '
         'LinksToolStripMenuItem
         '
-        Me.LinksToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripMenuItem4})
+        Me.LinksToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.DatapackMappingTableToolStripMenuItem, Me.ServerEnvForQAToolStripMenuItem, Me.ToolStripSeparator1, Me.CloseToolStripMenuItem})
         Me.LinksToolStripMenuItem.Name = "LinksToolStripMenuItem"
         Me.LinksToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.LinksToolStripMenuItem.Text = "File"
@@ -165,45 +173,74 @@ Partial Class frm_main
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(193, 22)
-        Me.ToolStripMenuItem2.Text = "Device Inventory List"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(240, 22)
+        Me.ToolStripMenuItem2.Text = "JIRA - Device Inventory"
         '
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(193, 22)
-        Me.ToolStripMenuItem3.Text = "Grammer Reqest Form"
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(240, 22)
+        Me.ToolStripMenuItem3.Text = "Tool - Grammar Reqest Form"
         '
         'ToolStripMenuItem4
         '
         Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(193, 22)
-        Me.ToolStripMenuItem4.Text = "NCS Config Viewer"
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(240, 22)
+        Me.ToolStripMenuItem4.Text = "Tool - NCS Config Viewer"
+        '
+        'DatapackMappingTableToolStripMenuItem
+        '
+        Me.DatapackMappingTableToolStripMenuItem.Name = "DatapackMappingTableToolStripMenuItem"
+        Me.DatapackMappingTableToolStripMenuItem.Size = New System.Drawing.Size(240, 22)
+        Me.DatapackMappingTableToolStripMenuItem.Text = "Wiki - Datapack Mapping Table"
+        '
+        'ServerEnvForQAToolStripMenuItem
+        '
+        Me.ServerEnvForQAToolStripMenuItem.Name = "ServerEnvForQAToolStripMenuItem"
+        Me.ServerEnvForQAToolStripMenuItem.Size = New System.Drawing.Size(240, 22)
+        Me.ServerEnvForQAToolStripMenuItem.Text = "Wiki - Server Env for QA"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(237, 6)
+        '
+        'CloseToolStripMenuItem
+        '
+        Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(240, 22)
+        Me.CloseToolStripMenuItem.Text = "Close"
         '
         'AboutToolStripMenuItem
         '
-        Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InstaJIRAWikiToolStripMenuItem, Me.ReportABugToolStripMenuItem})
+        Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportABugToolStripMenuItem, Me.InstaJIRAWikiToolStripMenuItem, Me.RevisionHistoryToolStripMenuItem})
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
         Me.AboutToolStripMenuItem.Text = "About"
         '
-        'InstaJIRAWikiToolStripMenuItem
-        '
-        Me.InstaJIRAWikiToolStripMenuItem.Name = "InstaJIRAWikiToolStripMenuItem"
-        Me.InstaJIRAWikiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.InstaJIRAWikiToolStripMenuItem.Text = "Insta-JIRA Wiki"
-        '
         'ReportABugToolStripMenuItem
         '
         Me.ReportABugToolStripMenuItem.Name = "ReportABugToolStripMenuItem"
-        Me.ReportABugToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ReportABugToolStripMenuItem.Text = "Report a bug"
+        Me.ReportABugToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.ReportABugToolStripMenuItem.Text = "JIRA - Report a bug"
+        '
+        'InstaJIRAWikiToolStripMenuItem
+        '
+        Me.InstaJIRAWikiToolStripMenuItem.Name = "InstaJIRAWikiToolStripMenuItem"
+        Me.InstaJIRAWikiToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.InstaJIRAWikiToolStripMenuItem.Text = "Wiki - Insta-JIRA"
+        '
+        'RevisionHistoryToolStripMenuItem
+        '
+        Me.RevisionHistoryToolStripMenuItem.Name = "RevisionHistoryToolStripMenuItem"
+        Me.RevisionHistoryToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.RevisionHistoryToolStripMenuItem.Text = "Revision History"
         '
         'gbx_controls
         '
         Me.gbx_controls.Controls.Add(Me.btn_nJira)
         Me.gbx_controls.Controls.Add(Me.btn_clear)
-        Me.gbx_controls.Controls.Add(Me.btn_refresh)
+        Me.gbx_controls.Controls.Add(Me.btn_update)
         Me.gbx_controls.Controls.Add(Me.btn_comment)
         Me.gbx_controls.Controls.Add(Me.btn_vJira)
         Me.gbx_controls.Controls.Add(Me.ShapeContainer1)
@@ -229,21 +266,21 @@ Partial Class frm_main
         '
         'btn_clear
         '
-        Me.btn_clear.Location = New System.Drawing.Point(6, 153)
+        Me.btn_clear.Location = New System.Drawing.Point(6, 154)
         Me.btn_clear.Name = "btn_clear"
         Me.btn_clear.Size = New System.Drawing.Size(123, 23)
         Me.btn_clear.TabIndex = 4
         Me.btn_clear.Text = "Clear"
         Me.btn_clear.UseVisualStyleBackColor = True
         '
-        'btn_refresh
+        'btn_update
         '
-        Me.btn_refresh.Location = New System.Drawing.Point(6, 102)
-        Me.btn_refresh.Name = "btn_refresh"
-        Me.btn_refresh.Size = New System.Drawing.Size(123, 23)
-        Me.btn_refresh.TabIndex = 3
-        Me.btn_refresh.Text = "Refresh"
-        Me.btn_refresh.UseVisualStyleBackColor = True
+        Me.btn_update.Location = New System.Drawing.Point(6, 102)
+        Me.btn_update.Name = "btn_update"
+        Me.btn_update.Size = New System.Drawing.Size(123, 23)
+        Me.btn_update.TabIndex = 3
+        Me.btn_update.Text = "Update"
+        Me.btn_update.UseVisualStyleBackColor = True
         '
         'btn_comment
         '
@@ -282,8 +319,8 @@ Partial Class frm_main
         Me.LineShape1.Name = "LineShape1"
         Me.LineShape1.X1 = 7
         Me.LineShape1.X2 = 122
-        Me.LineShape1.Y1 = 123
-        Me.LineShape1.Y2 = 123
+        Me.LineShape1.Y1 = 124
+        Me.LineShape1.Y2 = 124
         '
         'gbx_automation
         '
@@ -291,9 +328,9 @@ Partial Class frm_main
         Me.gbx_automation.Controls.Add(Me.rad_vlt)
         Me.gbx_automation.Controls.Add(Me.rad_mtc)
         Me.gbx_automation.Controls.Add(Me.rad_manual)
-        Me.gbx_automation.Location = New System.Drawing.Point(12, 216)
+        Me.gbx_automation.Location = New System.Drawing.Point(12, 217)
         Me.gbx_automation.Name = "gbx_automation"
-        Me.gbx_automation.Size = New System.Drawing.Size(136, 167)
+        Me.gbx_automation.Size = New System.Drawing.Size(136, 114)
         Me.gbx_automation.TabIndex = 0
         Me.gbx_automation.TabStop = False
         Me.gbx_automation.Text = "Test Type"
@@ -566,6 +603,7 @@ Partial Class frm_main
         Me.gbx_general0.Controls.Add(Me.cbx_project0)
         Me.gbx_general0.Controls.Add(Me.tbx_testSource0)
         Me.gbx_general0.Controls.Add(Me.Label3)
+        Me.gbx_general0.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbx_general0.Location = New System.Drawing.Point(6, 6)
         Me.gbx_general0.Name = "gbx_general0"
         Me.gbx_general0.Size = New System.Drawing.Size(621, 75)
@@ -576,6 +614,7 @@ Partial Class frm_main
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(6, 21)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(40, 13)
@@ -585,6 +624,7 @@ Partial Class frm_main
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(241, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 13)
@@ -624,6 +664,7 @@ Partial Class frm_main
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(6, 48)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 13)
@@ -1184,12 +1225,32 @@ Partial Class frm_main
         Me.Label33.TabIndex = 2
         Me.Label33.Text = "Test source"
         '
+        'gbx_deviceList
+        '
+        Me.gbx_deviceList.Controls.Add(Me.Button1)
+        Me.gbx_deviceList.Location = New System.Drawing.Point(12, 337)
+        Me.gbx_deviceList.Name = "gbx_deviceList"
+        Me.gbx_deviceList.Size = New System.Drawing.Size(136, 46)
+        Me.gbx_deviceList.TabIndex = 6
+        Me.gbx_deviceList.TabStop = False
+        Me.gbx_deviceList.Text = "Devices"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(6, 17)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(123, 23)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Device List"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(815, 403)
+        Me.Controls.Add(Me.gbx_deviceList)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.gbx_automation)
         Me.Controls.Add(Me.gbx_controls)
@@ -1198,7 +1259,7 @@ Partial Class frm_main
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frm_main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Insta-JIRA"
+        Me.Text = "InstaJIRA"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.gbx_controls.ResumeLayout(False)
@@ -1232,6 +1293,7 @@ Partial Class frm_main
         Me.gbx_apk2.PerformLayout()
         Me.gbx_general2.ResumeLayout(False)
         Me.gbx_general2.PerformLayout()
+        Me.gbx_deviceList.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1246,7 +1308,7 @@ Partial Class frm_main
     Friend WithEvents ReportABugToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents gbx_controls As System.Windows.Forms.GroupBox
     Friend WithEvents btn_clear As System.Windows.Forms.Button
-    Friend WithEvents btn_refresh As System.Windows.Forms.Button
+    Friend WithEvents btn_update As System.Windows.Forms.Button
     Friend WithEvents btn_comment As System.Windows.Forms.Button
     Friend WithEvents btn_vJira As System.Windows.Forms.Button
     Friend WithEvents btn_nJira As System.Windows.Forms.Button
@@ -1339,5 +1401,12 @@ Partial Class frm_main
     Friend WithEvents cbx_project2 As System.Windows.Forms.ComboBox
     Friend WithEvents tbx_testSource2 As System.Windows.Forms.TextBox
     Friend WithEvents Label33 As System.Windows.Forms.Label
+    Friend WithEvents DatapackMappingTableToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ServerEnvForQAToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents CloseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RevisionHistoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents gbx_deviceList As System.Windows.Forms.GroupBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class

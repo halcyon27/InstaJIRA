@@ -21,7 +21,7 @@
     Private Sub btn_mreccma_Click(sender As System.Object, e As System.EventArgs) Handles btn_mreccma.Click
 
         Me.Close()
-        Call MRECCMA()
+        frm_getGrxml.ShowDialog()
 
     End Sub
 

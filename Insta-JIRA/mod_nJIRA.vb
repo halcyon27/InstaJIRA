@@ -1,4 +1,4 @@
-﻿Module Module1
+﻿Module mod_nJira
 
     Public Sub Evermore()
 

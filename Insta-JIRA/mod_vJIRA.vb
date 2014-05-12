@@ -1,4 +1,4 @@
-﻿Module mod_nJira
+﻿Module mod_vJira
 
     'module for all vlingo system JIRAs:
     'ASRSCI    'BLKDG    'CEC    'LGEVM    'LGEVB    'MREC    'NAC    
@@ -215,125 +215,125 @@ ErrHandler3:
 
     Public Sub MRECCMA()
 
-        '        Call setTestEnv()
-        '        Call descriptions()
-        '        Call vlLanguages_1()
+        Call setActiveTab()
+        Call descriptions()
+        Call vlLanguages_1()
 
-        '        On Error GoTo ErrHandler3
+        On Error GoTo ErrHandler3
 
-        '        If frmGetGRXML.optMarkley = True Then Datacenter = "Markley"
-        '        If frmGetGRXML.optMontreal = True Then Datacenter = "Montreal"
-        '        If frmGetGRXML.optCVT2 = True Then Datacenter = "CVT2"
+        If frm_getGrxml.rad_markley.Checked = True Then datacenter = "Markley"
+        If frm_getGrxml.rad_montreal.Checked = True Then datacenter = "Montreal"
+        If frm_getGrxml.rad_cvt2.Checked = True Then datacenter = "CVT2"
 
-        '        If serverEnv Like "MTL*" Or serverEnv Like "CVT*" Then GoTo MRECMTL
+        If serverEnv Like "MTL*" Or serverEnv Like "CVT*" Then GoTo MRECMTL
 
-        'MRECCMA:
+MRECCMA:
 
-        '        'set nonlatin dynamic URL with extra lines for romanization
-        '        nonLatin = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=10611&issuetype=1&priority=3&components=11940&customfield_10250=" & langID & "&summary=" & _
-        '        "[" & project & "][" & language & "]+summary&customfield_10220=10420" & _
-        '        "&description=Utt+timestamp:+%0D" & _
-        '        "Datacenter:+" & Datacenter & "%0DDatapack:+" & datapack & "%0D" & Chr(34) & "SessionId" & Chr(34) & ":+%0D" & Chr(34) & _
-        '        "Speaker+ID" & Chr(34) & ":+" & frmGetGRXML.tbxSpeakerID.Text & _
-        '        "%0D" & Chr(34) & "NMAID" & Chr(34) & ":+" & frmGetGRXML.tbxNmaid.Text & "%0D" & Chr(34) & "FieldID" & Chr(34) & ":+%0D" & _
-        '        "----%0D" & _
-        '        "Unformatted+utt+[" & language & "]:%0D" & _
-        '        "Unformatted+utt+[en-US]:%0D" & _
-        '        "\\%0D" & _
-        '        "||+++++++++++++++++||[" & language & "]||[romanized]||[en-US]||%0D" & _
-        '        "||+Expected+display|++++++++|++++++++++++|++++++++|%0D" & _
-        '        "||+Actual+display++|++++++++|++++++++++++|++++++++|%0D" & _
-        '        "||+RawHyp++++++++++|++++++++|++++++++++++|++++++++|%0D" & _
-        '        "||+String+to+tag+++|++++++++|++++++++++++|++++++++|%0D" & _
-        '        "%0D" & _
-        '        "Note:+"
+        'set nonlatin dynamic URL with extra lines for romanization
+        nonLatin = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=10611&issuetype=1&priority=3&components=11940&customfield_10250=" & langID & "&summary=" & _
+        "[" & project & "][" & language & "]+summary&customfield_10220=10420" & _
+        "&description=Utt+timestamp:+%0D" & _
+        "Datacenter:+" & datacenter & "%0DDatapack:+" & datapack & "%0D" & Chr(34) & "SessionId" & Chr(34) & ":+%0D" & Chr(34) & _
+        "Speaker+ID" & Chr(34) & ":+" & frm_getGrxml.tbx_speakerId.Text & _
+        "%0D" & Chr(34) & "NMAID" & Chr(34) & ":+" & frm_getGrxml.tbx_nmaid.Text & "%0D" & Chr(34) & "FieldID" & Chr(34) & ":+%0D" & _
+        "----%0D" & _
+        "Unformatted+utt+[" & language & "]:%0D" & _
+        "Unformatted+utt+[en-US]:%0D" & _
+        "\\%0D" & _
+        "||+++++++++++++++++||[" & language & "]||[romanized]||[en-US]||%0D" & _
+        "||+Expected+display|++++++++|++++++++++++|++++++++|%0D" & _
+        "||+Actual+display++|++++++++|++++++++++++|++++++++|%0D" & _
+        "||+RawHyp++++++++++|++++++++|++++++++++++|++++++++|%0D" & _
+        "||+String+to+tag+++|++++++++|++++++++++++|++++++++|%0D" & _
+        "%0D" & _
+        "Note:+"
 
-        '        ''set latinurl
-        '        latin = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=10611&issuetype=1&priority=3&components=11940&customfield_10250=" & langID & "&summary=" & _
-        '        "[" & project & "][" & language & "]+summary&customfield_10220=10420" & _
-        '        "&description=Utt+timestamp:+%0D" & _
-        '        "Datacenter:+" & Datacenter & "%0DDatapack:+" & datapack & "%0D" & Chr(34) & "SessionId" & Chr(34) & ":+%0D" & Chr(34) & _
-        '        "Speaker+ID" & Chr(34) & ":+" & frmGetGRXML.tbxSpeakerID.Text & _
-        '        "%0D" & Chr(34) & "NMAID" & Chr(34) & ":+" & frmGetGRXML.tbxNmaid.Text & "%0D" & Chr(34) & "FieldID" & Chr(34) & ":+%0D" & _
-        '        "----%0D" & _
-        '        "Unformatted+utt+[" & language & "]:%0D" & _
-        '        "Unformatted+utt+[en-US]:%0D" & _
-        '        "\\%0D" & _
-        '        "||++++++++++++++++||[" & language & "]||[en-US]||%0D" & _
-        '        "||+Expected+display|++++++++|++++++++|%0D" & _
-        '        "||+Actual+display++|++++++++|++++++++|%0D" & _
-        '        "||+RawHyp++++++++++|++++++++|++++++++|%0D" & _
-        '        "||+String+to+tag+++|++++++++|++++++++|%0D" & _
-        '        "%0D" & _
-        '        "Note:+"
+        ''set latinurl
+        latin = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=10611&issuetype=1&priority=3&components=11940&customfield_10250=" & langID & "&summary=" & _
+        "[" & project & "][" & language & "]+summary&customfield_10220=10420" & _
+        "&description=Utt+timestamp:+%0D" & _
+        "Datacenter:+" & datacenter & "%0DDatapack:+" & datapack & "%0D" & Chr(34) & "SessionId" & Chr(34) & ":+%0D" & Chr(34) & _
+        "Speaker+ID" & Chr(34) & ":+" & frm_getGrxml.tbx_speakerId.Text & _
+        "%0D" & Chr(34) & "NMAID" & Chr(34) & ":+" & frm_getGrxml.tbx_nmaid.Text & "%0D" & Chr(34) & "FieldID" & Chr(34) & ":+%0D" & _
+        "----%0D" & _
+        "Unformatted+utt+[" & language & "]:%0D" & _
+        "Unformatted+utt+[en-US]:%0D" & _
+        "\\%0D" & _
+        "||++++++++++++++++||[" & language & "]||[en-US]||%0D" & _
+        "||+Expected+display|++++++++|++++++++|%0D" & _
+        "||+Actual+display++|++++++++|++++++++|%0D" & _
+        "||+RawHyp++++++++++|++++++++|++++++++|%0D" & _
+        "||+String+to+tag+++|++++++++|++++++++|%0D" & _
+        "%0D" & _
+        "Note:+"
 
-        '        GoTo continueSub
+        GoTo continueSub
 
-        'MRECMTL:
+MRECMTL:
 
-        '        ''set nonlatin url with extra lines for romanization
-        '        nonLatin = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=10611&issuetype=1&priority=3&components=11940&customfield_10250=" & langID & "&summary=" & _
-        '        "[" & project & "][" & language & "]+summary&customfield_10220=10420" & _
-        '        "&description=Utt+timestamp:+%0D" & _
-        '        "Datacenter:+" & Datacenter & "%0DDatapack:+" & datapack & "%0D" & Chr(34) & "SessionId" & Chr(34) & ":+%0D" & Chr(34) & _
-        '        "Speaker+ID" & Chr(34) & ":+" & frmGetGRXML.tbxSpeakerID.Text & _
-        '        "%0D" & Chr(34) & "NMAID" & Chr(34) & ":+" & frmGetGRXML.tbxNmaid.Text & "%0D" & Chr(34) & "FieldID" & Chr(34) & ":+%0D" & _
-        '        "----%0D" & _
-        '        "Unformatted+utt+[" & language & "]:%0D" & _
-        '        "Unformatted+utt+[en-US]:%0D" & _
-        '        "\\%0D" & _
-        '        "||+++++++++++++++++||[" & language & "]||[romanized]||[en-US]||%0D" & _
-        '        "||+Expected+display|++++++++|++++++++++++|++++++++|%0D" & _
-        '        "||+Actual+display++|++++++++|++++++++++++|++++++++|%0D" & _
-        '        "%0DASR%0D{noformat}{noformat}%0D" & _
-        '        "%0DNote:+"
+        ''set nonlatin url with extra lines for romanization
+        nonLatin = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=10611&issuetype=1&priority=3&components=11940&customfield_10250=" & langID & "&summary=" & _
+        "[" & project & "][" & language & "]+summary&customfield_10220=10420" & _
+        "&description=Utt+timestamp:+%0D" & _
+        "Datacenter:+" & datacenter & "%0DDatapack:+" & datapack & "%0D" & Chr(34) & "SessionId" & Chr(34) & ":+%0D" & Chr(34) & _
+        "Speaker+ID" & Chr(34) & ":+" & frm_getGrxml.tbx_speakerId.Text & _
+        "%0D" & Chr(34) & "NMAID" & Chr(34) & ":+" & frm_getGrxml.tbx_nmaid.Text & "%0D" & Chr(34) & "FieldID" & Chr(34) & ":+%0D" & _
+        "----%0D" & _
+        "Unformatted+utt+[" & language & "]:%0D" & _
+        "Unformatted+utt+[en-US]:%0D" & _
+        "\\%0D" & _
+        "||+++++++++++++++++||[" & language & "]||[romanized]||[en-US]||%0D" & _
+        "||+Expected+display|++++++++|++++++++++++|++++++++|%0D" & _
+        "||+Actual+display++|++++++++|++++++++++++|++++++++|%0D" & _
+        "%0DASR%0D{noformat}{noformat}%0D" & _
+        "%0DNote:+"
 
-        '        ''set latin url
-        '        latin = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=10611&issuetype=1&priority=3&components=11940&customfield_10250=" & langID & "&summary=" & _
-        '        "[" & project & "][" & language & "]+summary&customfield_10220=10420" & _
-        '        "&description=Utt+timestamp:+%0D" & _
-        '        "Datacenter:+" & Datacenter & "%0DDatapack:+" & datapack & "%0D" & Chr(34) & "SessionId" & Chr(34) & ":+%0D" & Chr(34) & _
-        '        "Speaker+ID" & Chr(34) & ":+" & frmGetGRXML.tbxSpeakerID.Text & _
-        '        "%0D" & Chr(34) & "NMAID" & Chr(34) & ":+" & frmGetGRXML.tbxNmaid.Text & "%0D" & Chr(34) & "FieldID" & Chr(34) & ":+%0D" & _
-        '        "----%0D" & _
-        '        "Unformatted+utt+[" & language & "]:%0D" & _
-        '        "Unformatted+utt+[en-US]:%0D" & _
-        '        "\\%0D" & _
-        '        "||++++++++++++++++||[" & language & "]||[en-US]||%0D" & _
-        '        "||+Expected+display|++++++++|++++++++|%0D" & _
-        '        "||+Actual+display++|++++++++|++++++++|%0D" & _
-        '        "%0DASR%0D{noformat}{noformat}%0D" & _
-        '        "%0DNote:+"
+        ''set latin url
+        latin = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=10611&issuetype=1&priority=3&components=11940&customfield_10250=" & langID & "&summary=" & _
+        "[" & project & "][" & language & "]+summary&customfield_10220=10420" & _
+        "&description=Utt+timestamp:+%0D" & _
+        "Datacenter:+" & datacenter & "%0DDatapack:+" & datapack & "%0D" & Chr(34) & "SessionId" & Chr(34) & ":+%0D" & Chr(34) & _
+        "Speaker+ID" & Chr(34) & ":+" & frm_getGrxml.tbx_speakerId.Text & _
+        "%0D" & Chr(34) & "NMAID" & Chr(34) & ":+" & frm_getGrxml.tbx_nmaid.Text & "%0D" & Chr(34) & "FieldID" & Chr(34) & ":+%0D" & _
+        "----%0D" & _
+        "Unformatted+utt+[" & language & "]:%0D" & _
+        "Unformatted+utt+[en-US]:%0D" & _
+        "\\%0D" & _
+        "||++++++++++++++++||[" & language & "]||[en-US]||%0D" & _
+        "||+Expected+display|++++++++|++++++++|%0D" & _
+        "||+Actual+display++|++++++++|++++++++|%0D" & _
+        "%0DASR%0D{noformat}{noformat}%0D" & _
+        "%0DNote:+"
 
-        'continueSub:
+continueSub:
 
-        '        ''choose latin or nonlatin format based on language choice
-        '        If language = "ko-KR" Then url = nonLatin
-        '        If language = "ja-JP" Then url = nonLatin
-        '        If language = "zh-CN" Then url = nonLatin
-        '        If language = "ru-RU" Then url = nonLatin
-        '        If language = "fr-FR" Then url = latin
-        '        If language = "it-IT" Then url = latin
-        '        If language = "de-DE" Then url = latin
-        '        If language = "es-ES" Then url = latin
-        '        If language = "v-es-LA" Then url = latin
-        '        If language = "en-GB" Then url = latin
-        '        If language = "en-US" Then url = latin
-        '        If language = "pt-BR" Then url = latin
+        ''choose latin or nonlatin format based on language choice
+        If language = "ko-KR" Then url = nonLatin
+        If language = "ja-JP" Then url = nonLatin
+        If language = "zh-CN" Then url = nonLatin
+        If language = "ru-RU" Then url = nonLatin
+        If language = "fr-FR" Then url = latin
+        If language = "it-IT" Then url = latin
+        If language = "de-DE" Then url = latin
+        If language = "es-ES" Then url = latin
+        If language = "v-es-LA" Then url = latin
+        If language = "en-GB" Then url = latin
+        If language = "en-US" Then url = latin
+        If language = "pt-BR" Then url = latin
 
-        '        Process.Start(url)
+        Process.Start(url)
 
-        '        Exit Sub
+        Exit Sub
 
-        'ErrHandler1:
-        '        MsgBox("Jira type not compatible with project selected.")
-        '        Exit Sub
-        'ErrHandler2:
-        '        MsgBox("Project not compatible with server selected.")
-        '        Exit Sub
-        'ErrHandler3:
-        '        MsgBox("There was an issue opening the Jira URL.")
-        '        Exit Sub
+ErrHandler1:
+        MsgBox("Jira type not compatible with project selected.")
+        Exit Sub
+ErrHandler2:
+        MsgBox("Project not compatible with server selected.")
+        Exit Sub
+ErrHandler3:
+        MsgBox("There was an issue opening the Jira URL.")
+        Exit Sub
 
     End Sub
 

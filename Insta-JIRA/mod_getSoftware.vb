@@ -27,6 +27,8 @@
         Call setActiveTab()
         Call vlSetHostUrl()
 
+        On Error GoTo NoData
+
         If serverEnv = "PROD" Then GoTo NoSupport
         If serverEnv = "VLINGO DEMO" Then GoTo NoSupport
         If serverEnv = "SS TEST" Then GoTo NoSupport
@@ -61,12 +63,13 @@
                 .tbx_host1.Text = hostUrl
             End If
             If getActiveTabIndex() = 2 Then
-                .tbx_software0.Text = software
+                .tbx_software2.Text = software
                 .tbx_host2.Text = hostUrl
             End If
         End With
 
         Exit Sub
+
 NoData:
 
         MsgBox("Error calling server status page. Check manually.")
@@ -238,6 +241,5 @@ configTwo:
     Public Sub nHostUrls()
 
     End Sub
-
 
 End Module

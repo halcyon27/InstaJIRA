@@ -5,6 +5,7 @@
     Public buildPath As String
     Public buildVersion As String
     Public commentFormat As String
+    Public datacenter As String
     Public datapack As String
     Public deviceID As String
     Public deviceInfo

@@ -1,4 +1,8 @@
-﻿Public Class frm_main
+﻿Imports System
+Imports System.IO
+Imports System.Text
+
+Public Class frm_main
 
     'DECLARE VARIABLES FOR SAVE SETTINGS
     Dim saveProject0, saveProject1, saveProject2 As String
@@ -24,9 +28,10 @@
         frm_vJIRA.ShowDialog()
 
     End Sub
-    'SAVE SETTINGS
+
     Private Sub frm_main_FormClosed(sender As Object, e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
 
+        'SAVE SETTINGS
         With My.Settings
             'TAB ONE
             .saveProject0 = Me.cbx_project0.Text
@@ -66,12 +71,13 @@
             '.saveDeviceInfo2 = Me.tbx_deviceInfo2.Text
         End With
 
+
+
     End Sub
 
     Private Sub frm_Main_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
         'RESTORED SAVED SETTINGS
-
         'TAB ONE
         Me.cbx_project0.Text = My.Settings.saveProject0
         Me.cbx_language0.Text = My.Settings.saveLanguage0
@@ -126,6 +132,9 @@
             .Add("pt-BR")
             .Add("en-GB")
             .Add("zh-CN")
+            .Add("zh-CT")
+            .Add("zh-HK")
+            .Add("zh-TW")
             .Add("ja-JP")
             .Add("ko-KR")
             .Add("ru-RU")
@@ -142,6 +151,7 @@
             .Add("Jproject-NCS")
             .Add("Jproject")
             .Add("Kproject")
+            .Add("Tproject")
             .Add("Midas")
             .Add("Q2")
             .Add("Tizen")
@@ -177,6 +187,9 @@
             .Add("pt-BR")
             .Add("en-GB")
             .Add("zh-CN")
+            .Add("zh-CT")
+            .Add("zh-HK")
+            .Add("zh-TW")
             .Add("ja-JP")
             .Add("ko-KR")
             .Add("ru-RU")
@@ -193,6 +206,7 @@
             .Add("Jproject-NCS")
             .Add("Jproject")
             .Add("Kproject")
+            .Add("Tproject")
             .Add("Midas")
             .Add("Q2")
             .Add("Tizen")
@@ -228,6 +242,9 @@
             .Add("pt-BR")
             .Add("en-GB")
             .Add("zh-CN")
+            .Add("zh-CT")
+            .Add("zh-HK")
+            .Add("zh-TW")
             .Add("ja-JP")
             .Add("ko-KR")
             .Add("ru-RU")
@@ -244,6 +261,7 @@
             .Add("Jproject-NCS")
             .Add("Jproject")
             .Add("Kproject")
+            .Add("Tproject")
             .Add("Midas")
             .Add("Q2")
             .Add("Tizen")
@@ -268,7 +286,7 @@
         End With
 
         'refresh server software and device info
-        Me.btn_refresh.PerformClick()
+        Me.btn_update.PerformClick()
 
     End Sub
 
@@ -284,11 +302,58 @@
 
     End Sub
 
-    Private Sub btn_refresh_Click(sender As System.Object, e As System.EventArgs) Handles btn_refresh.Click
+    Private Sub btn_refresh_Click(sender As System.Object, e As System.EventArgs) Handles btn_update.Click
 
         Call setGetSoftwareByServerEnv()
         Call getDeviceInfo()
 
     End Sub
 
+    Private Sub CloseToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CloseToolStripMenuItem.Click
+
+        Me.Close()
+
+    End Sub
+
+    Private Sub ToolStripMenuItem2_Click(sender As System.Object, e As System.EventArgs) Handles ToolStripMenuItem2.Click
+
+        'jira device inv
+        Process.Start("http://jira.vlingo.com/browse/DI#selectedTab=com.atlassian.jira.plugin.system.project%3Aissues-panel")
+
+    End Sub
+
+    Private Sub ToolStripMenuItem3_Click(sender As System.Object, e As System.EventArgs) Handles ToolStripMenuItem3.Click
+
+        'grammar request form
+        Process.Start("\\cma-filesrv01.nuance.com\project_management\Language Testing Team\VBA Productivity Tools\Grammar File Request Form.xlsm")
+
+    End Sub
+
+    Private Sub ReportABugToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ReportABugToolStripMenuItem.Click
+
+        'report bug with Insta JIRA
+        Process.Start("http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=12110&issuetype=1&components=14643&summary=[InstaJIRA v." _
+                      & Application.ProductVersion & "]+enter%20summary&description=describe+the+error%0Dpaste+the+error+text+or+attach+a+screenshot+if+necessary%0D%0Dassign+to+aden+williamson")
+
+    End Sub
+
+    Private Sub InstaJIRAWikiToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles InstaJIRAWikiToolStripMenuItem.Click
+
+        'JIRA tool Wiki link
+        Process.Start("http://wiki.vlingo.com/display/QA/Insta-Jira+Tool")
+
+    End Sub
+
+    Private Sub ToolStripMenuItem4_Click(sender As System.Object, e As System.EventArgs) Handles ToolStripMenuItem4.Click
+
+        'ncs config viewer
+        Process.Start("http://10.32.4.83/ncs-configuration-viewer.html")
+
+    End Sub
+
+    Private Sub RevisionHistoryToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles RevisionHistoryToolStripMenuItem.Click
+
+        Process.Start(Application.StartupPath & "\revisionHistory.txt")
+
+    End Sub
 End Class

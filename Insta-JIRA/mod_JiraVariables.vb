@@ -97,6 +97,9 @@
         If language = "pt-BR" Then langID = "10018"
         If language = "en-GB" Then langID = "10006"
         If language = "zh-CN" Then langID = "10044"
+        If language = "zh-CT" Then langID = ""
+        If language = "zh-HK" Then langID = "10021"
+        If language = "zh-TW" Then langID = "10046"
         If language = "ja-JP" Then langID = "10039"
         If language = "ko-KR" Then langID = "10040"
         If language = "ru-RU" Then langID = "10052"
@@ -113,10 +116,12 @@
         If langID = "10018" Then langCode = "por-BRA"
         If langID = "10006" Then langCode = "eng-GBR"
         If langID = "10044" Then langCode = "cmn-CHN"
+        If langID = "" Then langCode = "yue-CHS"
+        If langID = "10021" Then langCode = "yue-CHN"
+        If langID = "10046" Then langCode = "cmn-TWN"
         If langID = "10039" Then langCode = "jpn-JPN"
         If langID = "10040" Then langCode = "kor-KOR"
         If langID = "10052" Then langCode = "rus-RUS"
-
     End Sub
 
     Public Sub vlLanguages_2()
