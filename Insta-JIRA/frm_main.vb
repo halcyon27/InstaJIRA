@@ -1,8 +1,4 @@
-﻿Imports System
-Imports System.IO
-Imports System.Text
-
-Public Class frm_main
+﻿Public Class frm_main
 
     'DECLARE VARIABLES FOR SAVE SETTINGS
     Dim saveProject0, saveProject1, saveProject2 As String
@@ -71,11 +67,15 @@ Public Class frm_main
             '.saveDeviceInfo2 = Me.tbx_deviceInfo2.Text
         End With
 
-
-
     End Sub
 
     Private Sub frm_Main_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
+        'populate device list from xml
+        Dim xml_deviceList As XDocument = XDocument.Load(xmlFilePath & "inventoryList.xml")
+        Me.cbx_diNumber0.DataSource = (From element In xml_deviceList.Descendants("diNumber") Select element.Value).ToList()
+        Me.cbx_diNumber1.DataSource = (From element In xml_deviceList.Descendants("diNumber") Select element.Value).ToList()
+        Me.cbx_diNumber2.DataSource = (From element In xml_deviceList.Descendants("diNumber") Select element.Value).ToList()
 
         'RESTORED SAVED SETTINGS
         'TAB ONE
@@ -116,9 +116,6 @@ Public Class frm_main
         Me.tbx_datapack2.Text = My.Settings.saveDatapack2
         Me.cbx_diNumber2.Text = My.Settings.saveDiNumber2
         'Me.tbx_deviceInfo2.Text = My.Settings.saveDeviceInfo2
-
-        'select "Manual" radio button
-        Me.rad_manual.Checked = True
 
         'populate comboboxes on frm_main--future work link to data source
         With Me.cbx_language0.Items
@@ -285,6 +282,12 @@ Public Class frm_main
             .Add("VLINGO DEMO")
         End With
 
+        'select "Manual" radio button
+        'Me.rad_manual.Checked = True
+
+        'populate device combobox on frm_main from xml
+        Call getDeviceInfo()
+
         'refresh server software and device info
         Me.btn_update.PerformClick()
 
@@ -329,13 +332,6 @@ Public Class frm_main
 
     End Sub
 
-    Private Sub ReportABugToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ReportABugToolStripMenuItem.Click
-
-        'report bug with Insta JIRA
-        Process.Start("http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=12110&issuetype=1&components=14643&summary=[InstaJIRA v." _
-                      & Application.ProductVersion & "]+enter%20summary&description=describe+the+error%0Dpaste+the+error+text+or+attach+a+screenshot+if+necessary%0D%0Dassign+to+aden+williamson")
-
-    End Sub
 
     Private Sub InstaJIRAWikiToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles InstaJIRAWikiToolStripMenuItem.Click
 
@@ -360,6 +356,32 @@ Public Class frm_main
     Private Sub btn_deviceList_Click(sender As System.Object, e As System.EventArgs) Handles btn_deviceList.Click
 
         frm_deviceList.Show()
+
+    End Sub
+
+    Private Sub cbx_diNumber0_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cbx_diNumber0.SelectedIndexChanged
+
+        Call getDeviceInfo()
+
+    End Sub
+
+    Private Sub cbx_diNumber1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cbx_diNumber1.SelectedIndexChanged
+
+        Call getDeviceInfo()
+
+    End Sub
+
+    Private Sub cbx_diNumber2_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cbx_diNumber2.SelectedIndexChanged
+
+        Call getDeviceInfo()
+
+    End Sub
+
+    Private Sub ReportABugToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ReportABugToolStripMenuItem.Click
+
+        'report bug with Insta JIRA
+        Process.Start("http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=12110&issuetype=1&components=14643&summary=[InstaJIRA v." _
+                      & Application.ProductVersion & "]+enter%20summary&description=describe+the+error%0Dpaste+the+error+text+or+attach+a+screenshot+if+necessary%0D%0Dassign+to+aden+williamson")
 
     End Sub
 End Class

@@ -47,7 +47,7 @@ Partial Class frm_deviceList
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(586, 375)
         Me.Controls.Add(Me.grid_deviceList)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "frm_deviceList"
         Me.Text = "Device List"
         CType(Me.ds_deviceList, System.ComponentModel.ISupportInitialize).EndInit()
@@ -55,6 +55,6 @@ Partial Class frm_deviceList
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents ds_deviceList As System.Data.DataSet
     Friend WithEvents grid_deviceList As System.Windows.Forms.DataGridView
+    Friend WithEvents ds_deviceList As System.Data.DataSet
 End Class

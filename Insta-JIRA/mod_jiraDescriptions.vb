@@ -15,10 +15,10 @@
         ''server issues
         vlServer = "" _
          & "TEST+ENVIRONMENT" _
-        & "%0Ddevice:+" & diNumber & "+(+model=" & deviceModel & "+Series=" & deviceSeries & "+OS=" & deviceOS & "+)" _
+        & "%0Ddevice:+" & diNumber & "+(+" & deviceInfo & "+)" _
         & "%0Dbuild+version:+" & buildVersion _
         & "%0Dbuild+path:+" & buildPath _
-        & "%0Dserver:+" & serverEnv & " (" & software & ")" & additionalInfo _
+        & "%0Dserver:+" & serverEnv & " (+" & software & ")" & additionalInfo _
         & "%0D%0DPRECONDITIONS%0Dalarms,+contacts,+fieldID..." _
         & "%0D%0DDESCRIPTION" _
         & "%0D%0D*REPRODUCE*%0D{quote}%0Dadd%0Dsteps%0D{quote}" _
@@ -31,10 +31,10 @@
         ''client issues
         vlClient = "" _
        & "TEST+ENVIRONMENT" _
-       & "%0Ddevice:+" & diNumber & "+(+model=" & deviceModel & "+Series=" & deviceSeries & "+OS=" & deviceOS & "+)" _
+        & "%0Ddevice:+" & diNumber & "+(+" & deviceInfo & "+)" _
        & "%0Dbuild+version:+" & buildVersion _
        & "%0Dbuild+path:+" & buildPath _
-       & "%0Dserver:+" & serverEnv & " (" & software & ")" & additionalInfo _
+       & "%0Dserver:+" & serverEnv & " (+" & software & ")" & additionalInfo _
        & "%0D%0DPRECONDITIONS%0Dalarms,+contacts,+fieldID..." _
        & "%0D%0DDESCRIPTION" _
        & "%0D%0D*REPRODUCE*%0D{quote}%0Dadd%0Dsteps%0D{quote}" _
@@ -57,8 +57,8 @@
         & "%0D%0DTest+source:+" & testSource
 
         nServer = "" _
-        & "&summary=[" & project & "]+[" & langCode & "]+summary" _
-        & "&environment=device:+" & diNumber & "+(+model=" & deviceModel & "+Series=" & deviceSeries & "+OS=" & deviceOS & "+)" _
+        & "&summary=[" & project & "]" & automationTest & "[" & langCode & "]+summary" _
+        & "%0Ddevice:+" & diNumber & "+(+" & deviceInfo & "+)" _
         & "%0Dbuild+path:+" & buildPath & "" _
         & "%0Dserver:+" & serverEnv & " (+" & software & "+)" _
         & "&description=" _
@@ -71,8 +71,8 @@
         & "%0D%0DCAS%0D{code}{code}"
 
         nClient = "" _
-        & "&summary=[" & project & "]+[" & langCode & "]+summary" _
-        & "&environment=device:+" & diNumber & "+(+model=" & deviceModel & "+Series=" & deviceSeries & "+OS=" & deviceOS & "+)" _
+        & "&summary=[" & project & "]" & automationTest & "[" & langCode & "]+summary" _
+        & "%0Ddevice:+" & diNumber & "+(+" & deviceInfo & "+)" _
         & "%0Dbuild+path:+" & buildPath & "" _
         & "%0Dserver:+" & serverEnv & " (+" & software & "+)" _
         & "&description=" _

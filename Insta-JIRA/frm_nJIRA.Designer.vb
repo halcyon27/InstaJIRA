@@ -33,7 +33,9 @@ Partial Class frm_nJIRA
         Me.btn_zpNlu = New System.Windows.Forms.Button()
         Me.btn_zpUdss = New System.Windows.Forms.Button()
         Me.gbx_nServer = New System.Windows.Forms.GroupBox()
+        Me.btn_evermore = New System.Windows.Forms.Button()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gbx_nClient.SuspendLayout()
         Me.gbx_nServer.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,6 +46,7 @@ Partial Class frm_nJIRA
         '
         'gbx_nClient
         '
+        Me.gbx_nClient.Controls.Add(Me.btn_evermore)
         Me.gbx_nClient.Location = New System.Drawing.Point(218, 12)
         Me.gbx_nClient.Name = "gbx_nClient"
         Me.gbx_nClient.Size = New System.Drawing.Size(100, 215)
@@ -139,6 +142,15 @@ Partial Class frm_nJIRA
         Me.gbx_nServer.TabStop = False
         Me.gbx_nServer.Text = "Server"
         '
+        'btn_evermore
+        '
+        Me.btn_evermore.Location = New System.Drawing.Point(6, 19)
+        Me.btn_evermore.Name = "btn_evermore"
+        Me.btn_evermore.Size = New System.Drawing.Size(90, 26)
+        Me.btn_evermore.TabIndex = 6
+        Me.btn_evermore.Text = "Evermore"
+        Me.btn_evermore.UseVisualStyleBackColor = True
+        '
         'frm_nJIRA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -152,6 +164,7 @@ Partial Class frm_nJIRA
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "JIRA Projects - Nuance"
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gbx_nClient.ResumeLayout(False)
         Me.gbx_nServer.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -167,4 +180,5 @@ Partial Class frm_nJIRA
     Friend WithEvents btn_zpAdrClint As System.Windows.Forms.Button
     Friend WithEvents btn_zpAdk As System.Windows.Forms.Button
     Friend WithEvents btn_zpAcc As System.Windows.Forms.Button
+    Friend WithEvents btn_evermore As System.Windows.Forms.Button
 End Class

@@ -73,12 +73,30 @@
 NoData:
 
         MsgBox("Error calling server status page. Check manually.")
+        GoTo clearSoftware
         Exit Sub
 
 NoSupport:
 
         MsgBox("Cannot parse software data from " & serverEnv & ". Check manually.")
+        GoTo clearSoftware
         Exit Sub
+
+clearSoftware:
+        With frm_main
+            If getActiveTabIndex() = 0 Then
+                .tbx_software0.Text = ""
+                .tbx_host0.Text = ""
+            End If
+            If getActiveTabIndex() = 1 Then
+                .tbx_software1.Text = ""
+                .tbx_host1.Text = ""
+            End If
+            If getActiveTabIndex() = 2 Then
+                .tbx_software2.Text = ""
+                .tbx_host2.Text = ""
+            End If
+        End With
 
     End Sub
     'urls on this page should match with those found at http://wiki.vlingo.com/display/PM/Server+Environments+for+QA+Language+Testers

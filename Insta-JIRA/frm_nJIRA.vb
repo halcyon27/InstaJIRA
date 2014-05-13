@@ -48,4 +48,11 @@
         Call ZPUDSS()
 
     End Sub
+
+    Private Sub btn_evermore_Click(sender As System.Object, e As System.EventArgs) Handles btn_evermore.Click
+
+        Me.Close()
+        Call Evermore()
+
+    End Sub
 End Class

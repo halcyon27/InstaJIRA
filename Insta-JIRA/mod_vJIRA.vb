@@ -69,7 +69,7 @@ continueSub:
         ''build url
         url = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=10512" _
         & "&issuetype=1" _
-        & "&summary=[" & project & "]+[" & language & "]+summary" _
+        & "&summary=[" & project & "]" & automationTest & "[" & language & "]+summary" _
         & "&priority=3" _
         & "&customfield_10220=10420&" _
         & "&description=" & vlClient
@@ -105,7 +105,7 @@ ErrHandler3:
         ''build URL
         url = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=11310" _
         & "&issuetype=1" _
-        & "&summary=[" & project & "]+[" & language & "]+summary" _
+        & "&summary=[" & project & "]" & automationTest & "[" & language & "]+summary" _
         & "&priority=3" _
         & "&customfield_10220=10420" _
         & "&customfield_10251=" & platform _
@@ -149,7 +149,7 @@ continueSub:
         ''build url
         url = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=11510" _
         & "&issuetype=1" _
-        & "&summary=[" & project & "]+[" & language & "]+summary" _
+        & "&summary=[" & project & "]" & automationTest & "[" & language & "]+summary" _
         & "&priority=3" _
         & "&customfield_10220=10420&" _
         & "&description=" & vlClient
@@ -191,7 +191,7 @@ continueSub:
         ''build url
         url = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=12211" _
         & "&issuetype=1" _
-        & "&summary=[" & project & "]+[" & language & "]+summary" _
+        & "&summary=[" & project & "]" & automationTest & "[" & language & "]+summary" _
         & "&priority=3" _
         & "&customfield_10220=10420&" _
         & "&description=" & vlClient
@@ -345,7 +345,7 @@ ErrHandler3:
         ''build url
         url = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=11210" _
         & "&issuetype=1" _
-        & "&summary=[" & project & "]+[" & language & "]+summary" _
+        & "&summary=[" & project & "]" & automationTest & "[" & language & "]+summary" _
         & "&priority=3" _
         & "&customfield_10220=10420&" _
         & "&description=" & vlClient
@@ -383,7 +383,7 @@ ErrHandler3:
         ''build url
         url = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=11810" _
         & "&issuetype=1" _
-        & "&summary=[" & project & "]+[" & language & "]+summary" _
+        & "&summary=[" & project & "]" & automationTest & "[" & language & "]+summary" _
         & "&priority=3" _
         & "&customfield_10220=10420" _
         & "&customfield_10480=" & platform & "" _
@@ -518,7 +518,7 @@ ErrHandler3:
         ''build url
         url = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=11710" _
         & "&issuetype=1" _
-        & "&summary=[" & project & "]+[" & language & "]+summary" _
+        & "&summary=[" & project & "]" & automationTest & "[" & language & "]+summary" _
         & "&customfield_11184=11573" _
         & "&customfield_11180=11555" _
         & "&customfield_10250=" & langID & "" _
@@ -564,7 +564,7 @@ ErrHandler3:
         ''build url
         url = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=10511" _
         & "&issuetype=1" _
-        & "&summary=[" & project & "]+[" & language & "]+summary" _
+        & "&summary=[" & project & "]" & automationTest & "[" & language & "]+summary" _
         & "&customfield_11184=11573" _
         & "&customfield_11180=11555" _
         & "&customfield_10250=" & langID & "" _
@@ -610,7 +610,7 @@ ErrHandler3:
         ''build url
         url = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=10710" _
         & "&issuetype=1" _
-        & "&summary=[" & project & "]+[" & language & "]+summary" _
+        & "&summary=[" & project & "]" & automationTest & "[" & language & "]+summary" _
         & "&customfield_11184=11573" _
         & "&customfield_11180=11555" _
         & "&customfield_10250=" & langID & "" _

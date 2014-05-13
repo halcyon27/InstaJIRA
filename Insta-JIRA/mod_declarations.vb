@@ -50,4 +50,8 @@
         qadmz_1_engb, qadmz_1_zhcn, qadmz_1_jajp, qadmz_1_kokr, qadmz_1_ruru As String
     Public qadmz_2_enus, qadmz_2_frfr, qadmz_2_itit, qadmz_2_dede, qadmz_2_eses, qadmz_2_vesla, qadmz_2_ptbr, _
         qadmz_2_engb, qadmz_2_zhcn, qadmz_2_jajp, qadmz_2_kokr, qadmz_2_ruru As String
+
+    'set file path to xml docs with config info
+    Public xmlFilePath As String = "\\cma-filesrv01.nuance.com\project_management\Language Testing Team\InstaJIRA\"
+
 End Module

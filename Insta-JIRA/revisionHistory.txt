@@ -1,13 +1,18 @@
 ﻿InstaJIRA revision history
 
 5/13/2014
-	
+	v. 2.0.0.5
+		-added btn_evermore to frm_main.frm_nJira
+		-added string for automation test type to every JIRA project except MRECCMA
+		-device list populates from xml on network drive
+		-wrote getDeviceInfo
+		-created xml_formItems for language, project, serverEnv--this is still incomplete
+		-provisioned autoupdate function
+
+	published to network drive for beta testing
 
 5/12/2014
-	v. 2.0.0.7
-	v. 2.0.0.6
-		connected to deviceMasterList.xlsm on QA Collab SharePoint
 	v. 2.0.0.5
-		added support for new chinese languages to nJIRA
-		corrected spelling of Grammar Reqest Form
-		added btn_evermore to frm_main.frm_nJira
+		-added cool icon
+		-added support for new chinese languages to nJIRA
+		-corrected spelling of Grammar Reqest Form

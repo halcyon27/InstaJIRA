@@ -24,6 +24,7 @@ Partial Class frm_main
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.LinksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportABugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
@@ -32,7 +33,6 @@ Partial Class frm_main
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportABugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InstaJIRAWikiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RevisionHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.gbx_controls = New System.Windows.Forms.GroupBox()
@@ -165,10 +165,16 @@ Partial Class frm_main
         '
         'LinksToolStripMenuItem
         '
-        Me.LinksToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.DatapackMappingTableToolStripMenuItem, Me.ServerEnvForQAToolStripMenuItem, Me.ToolStripSeparator1, Me.CloseToolStripMenuItem})
+        Me.LinksToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportABugToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.DatapackMappingTableToolStripMenuItem, Me.ServerEnvForQAToolStripMenuItem, Me.ToolStripSeparator1, Me.CloseToolStripMenuItem})
         Me.LinksToolStripMenuItem.Name = "LinksToolStripMenuItem"
         Me.LinksToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.LinksToolStripMenuItem.Text = "File"
+        '
+        'ReportABugToolStripMenuItem
+        '
+        Me.ReportABugToolStripMenuItem.Name = "ReportABugToolStripMenuItem"
+        Me.ReportABugToolStripMenuItem.Size = New System.Drawing.Size(240, 22)
+        Me.ReportABugToolStripMenuItem.Text = "JIRA - Report a bug"
         '
         'ToolStripMenuItem2
         '
@@ -213,27 +219,21 @@ Partial Class frm_main
         '
         'AboutToolStripMenuItem
         '
-        Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportABugToolStripMenuItem, Me.InstaJIRAWikiToolStripMenuItem, Me.RevisionHistoryToolStripMenuItem})
+        Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InstaJIRAWikiToolStripMenuItem, Me.RevisionHistoryToolStripMenuItem})
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
         Me.AboutToolStripMenuItem.Text = "About"
         '
-        'ReportABugToolStripMenuItem
-        '
-        Me.ReportABugToolStripMenuItem.Name = "ReportABugToolStripMenuItem"
-        Me.ReportABugToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
-        Me.ReportABugToolStripMenuItem.Text = "JIRA - Report a bug"
-        '
         'InstaJIRAWikiToolStripMenuItem
         '
         Me.InstaJIRAWikiToolStripMenuItem.Name = "InstaJIRAWikiToolStripMenuItem"
-        Me.InstaJIRAWikiToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.InstaJIRAWikiToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.InstaJIRAWikiToolStripMenuItem.Text = "Wiki - Insta-JIRA"
         '
         'RevisionHistoryToolStripMenuItem
         '
         Me.RevisionHistoryToolStripMenuItem.Name = "RevisionHistoryToolStripMenuItem"
-        Me.RevisionHistoryToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.RevisionHistoryToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.RevisionHistoryToolStripMenuItem.Text = "Revision History"
         '
         'gbx_controls
@@ -340,10 +340,10 @@ Partial Class frm_main
         Me.rad_oneshot.AutoSize = True
         Me.rad_oneshot.Location = New System.Drawing.Point(6, 88)
         Me.rad_oneshot.Name = "rad_oneshot"
-        Me.rad_oneshot.Size = New System.Drawing.Size(65, 17)
+        Me.rad_oneshot.Size = New System.Drawing.Size(64, 17)
         Me.rad_oneshot.TabIndex = 18
         Me.rad_oneshot.TabStop = True
-        Me.rad_oneshot.Text = "Oneshot"
+        Me.rad_oneshot.Text = "Harness"
         Me.rad_oneshot.UseVisualStyleBackColor = True
         '
         'rad_vlt
@@ -421,6 +421,7 @@ Partial Class frm_main
         'tbx_deviceInfo0
         '
         Me.tbx_deviceInfo0.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.tbx_deviceInfo0.Enabled = False
         Me.tbx_deviceInfo0.Location = New System.Drawing.Point(316, 20)
         Me.tbx_deviceInfo0.Name = "tbx_deviceInfo0"
         Me.tbx_deviceInfo0.Size = New System.Drawing.Size(297, 20)
@@ -1305,7 +1306,6 @@ Partial Class frm_main
     Friend WithEvents ToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents InstaJIRAWikiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ReportABugToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents gbx_controls As System.Windows.Forms.GroupBox
     Friend WithEvents btn_clear As System.Windows.Forms.Button
     Friend WithEvents btn_update As System.Windows.Forms.Button
@@ -1408,5 +1408,6 @@ Partial Class frm_main
     Friend WithEvents RevisionHistoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents gbx_deviceList As System.Windows.Forms.GroupBox
     Friend WithEvents btn_deviceList As System.Windows.Forms.Button
+    Friend WithEvents ReportABugToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

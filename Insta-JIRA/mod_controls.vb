@@ -13,15 +13,28 @@
 
     Function getAutomationTestType()
 
-        Dim rButton As RadioButton = frm_main.gbx_automation.Controls.OfType(Of RadioButton)().Where(Function(r) r.Checked = True).FirstOrDefault()
-        Dim automationTestType As String = rButton.Text
+        'Dim rButton As RadioButton = frm_main.gbx_automation.Controls.OfType(Of RadioButton)().Where(Function(r) r.Checked = True).FirstOrDefault()
+        'Dim automationTestType As String = rButton.Text
 
-        If automationTestType = "Manual" Then
-            automationTestType = ""
-        Else : automationTestType = "[" & automationTestType & "]"
-        End If
-
-        Return automationTestType
+        'If automationTestType = "Manual" Then
+        '    automationTestType = ""
+        'Else : automationTestType = "[" & automationTestType & "]"
+        'End If
+        Dim automationTestType As String = ""
+        With frm_main
+            If .rad_mtc.Checked = True Then
+                automationTestType = .rad_mtc.Text
+                Return "[" & automationTestType & "]"
+            ElseIf.rad_vlt.Checked = True Then
+                    automationTestType = .rad_vlt.Text
+                Return "[" & automationTestType & "-R]"
+            ElseIf .rad_oneshot.Checked = True Then
+                automationTestType = .rad_oneshot.Text
+                Return "[" & automationTestType & "]"
+            Else
+                Return ""
+            End If
+        End With
 
     End Function
 
@@ -36,10 +49,7 @@
             commentFormat = "lang: " & language & vbCrLf
         End If
         If diNumber <> "" Then
-            commentFormat = commentFormat & "device: " & diNumber & " ( model=" & deviceModel & " | series=" & deviceSeries & " | os=" & deviceOS & " )" & vbCrLf
-        End If
-        If diNumber = "" And deviceModel <> "" Then
-            commentFormat = commentFormat & "device: ( model=" & deviceModel & " | series=" & deviceSeries & " | os=" & deviceOS & " )" & vbCrLf
+            commentFormat = commentFormat & "device: " & diNumber & " ( " & deviceInfo & " )" & vbCrLf
         End If
         If buildVersion <> "" Then
             commentFormat = commentFormat & "build version: " & buildVersion & vbCrLf
@@ -57,10 +67,10 @@
             commentFormat = commentFormat & "server: ( " & software & " )" & vbCrLf
         End If
         If software <> "" And serverEnv <> "" Then
-            commentFormat = commentFormat & " ( " & software & " )" & vbCrLf
+            commentFormat = commentFormat & " ( " & software & " ) "
         End If
         If datapack <> "" Then
-            commentFormat = commentFormat & "datapack: " & datapack
+            commentFormat = commentFormat & vbCrLf & "datapack: " & datapack
         End If
 
         If commentFormat = "()" Then commentFormat = ""
