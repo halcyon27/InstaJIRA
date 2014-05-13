@@ -131,7 +131,7 @@ Partial Class frm_main
         Me.tbx_testSource2 = New System.Windows.Forms.TextBox()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.gbx_deviceList = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_deviceList = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.gbx_controls.SuspendLayout()
         Me.gbx_automation.SuspendLayout()
@@ -1227,7 +1227,7 @@ Partial Class frm_main
         '
         'gbx_deviceList
         '
-        Me.gbx_deviceList.Controls.Add(Me.Button1)
+        Me.gbx_deviceList.Controls.Add(Me.btn_deviceList)
         Me.gbx_deviceList.Location = New System.Drawing.Point(12, 337)
         Me.gbx_deviceList.Name = "gbx_deviceList"
         Me.gbx_deviceList.Size = New System.Drawing.Size(136, 46)
@@ -1235,14 +1235,14 @@ Partial Class frm_main
         Me.gbx_deviceList.TabStop = False
         Me.gbx_deviceList.Text = "Devices"
         '
-        'Button1
+        'btn_deviceList
         '
-        Me.Button1.Location = New System.Drawing.Point(6, 17)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(123, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Device List"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btn_deviceList.Location = New System.Drawing.Point(6, 17)
+        Me.btn_deviceList.Name = "btn_deviceList"
+        Me.btn_deviceList.Size = New System.Drawing.Size(123, 23)
+        Me.btn_deviceList.TabIndex = 5
+        Me.btn_deviceList.Text = "Device List"
+        Me.btn_deviceList.UseVisualStyleBackColor = True
         '
         'frm_main
         '
@@ -1407,6 +1407,6 @@ Partial Class frm_main
     Friend WithEvents CloseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RevisionHistoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents gbx_deviceList As System.Windows.Forms.GroupBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btn_deviceList As System.Windows.Forms.Button
 
 End Class

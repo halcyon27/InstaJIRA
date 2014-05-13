@@ -356,4 +356,10 @@ Public Class frm_main
         Process.Start(Application.StartupPath & "\revisionHistory.txt")
 
     End Sub
+
+    Private Sub btn_deviceList_Click(sender As System.Object, e As System.EventArgs) Handles btn_deviceList.Click
+
+        frm_deviceList.Show()
+
+    End Sub
 End Class

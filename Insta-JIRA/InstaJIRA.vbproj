@@ -112,6 +112,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="frm_deviceList.Designer.vb">
+      <DependentUpon>frm_deviceList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_deviceList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_getGrxml.Designer.vb">
       <DependentUpon>frm_getGrxml.vb</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -172,6 +178,9 @@
     <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frm_deviceList.resx">
+      <DependentUpon>frm_deviceList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_comment.resx">
       <DependentUpon>frm_comment.vb</DependentUpon>
       <SubType>Designer</SubType>
