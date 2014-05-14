@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("InstaJIRA")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("AdenW")> 
-<Assembly: AssemblyProduct("InstaJIRA")> 
+<Assembly: AssemblyProduct("AdenW")> 
 <Assembly: AssemblyCopyright("Copyright ©  2014")> 
 <Assembly: AssemblyTrademark("")> 
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("2.0.0.6")> 
-<Assembly: AssemblyFileVersion("2.0.0.6")> 
+<Assembly: AssemblyVersion("2.0.0")> 
+<Assembly: AssemblyFileVersion("2.0.0")> 

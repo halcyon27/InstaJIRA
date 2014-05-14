@@ -27,9 +27,9 @@ Module mod_getDeviceInfo
                 os = dr.Item(3).ToString
             End If
 
-            If getActiveTabIndex() = 0 Then frm_main.tbx_deviceInfo0.Text = "model=" & model & " |series=" & series & " |os=" & os
-            If getActiveTabIndex() = 1 Then frm_main.tbx_deviceInfo1.Text = "model=" & model & " |series=" & series & " |os=" & os
-            If getActiveTabIndex() = 2 Then frm_main.tbx_deviceInfo2.Text = "model=" & model & " |series=" & series & " |os=" & os
+            If getActiveTabIndex() = 0 Then frm_main.tbx_deviceInfo0.Text = "model=" & model & " | series=" & series & " | os=" & os
+            If getActiveTabIndex() = 1 Then frm_main.tbx_deviceInfo1.Text = "model=" & model & " | series=" & series & " | os=" & os
+            If getActiveTabIndex() = 2 Then frm_main.tbx_deviceInfo2.Text = "model=" & model & " | series=" & series & " | os=" & os
 
         Next
 

@@ -29,7 +29,7 @@
     <MinimumRequiredVersion>2.0.0.5</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationRevision>12</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -152,7 +152,6 @@
       <DependentUpon>frm_main.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mod_getGrxml.vb" />
     <Compile Include="mod_getSoftware.vb" />
     <Compile Include="mod_getDeviceInfo.vb" />
     <Compile Include="mod_nJira.vb" />
@@ -254,7 +253,9 @@
     <Content Include="revisionHistory.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="xml_formItems.xml" />
+    <Content Include="xml_formItems.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

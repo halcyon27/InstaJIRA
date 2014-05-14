@@ -1,6 +1,33 @@
 ﻿InstaJIRA revision history
 
+future-->parse vvscf model
+future-->fix device info on load
+future-->allow update of device list xml via application
+future-->move frm_main variables to external xml
+future-->move serverEnv to external xml
+future-->checks version of external xmls every three hours and imports file if updated
+
+5/14/2014
+	v. 2.0.0.10, 11
+		-fix issue where tabpage text is blank on load
+	v. 2.0.0.9
+		-changed vlingo asr servers to load balancer pages
+			-qadmz: http://10.5.252.158:8080/asr/status
+			-qatest3: http://10.5.252.158:8080/asr/status
+			-qatest: http://10.5.13.121:8080/asr/status
+		-made host textbox accessible (via doubleclick of label)
+		-port host info to JIRA description for Nuance system JIRAs
+	v. 2.0.0.8
+		-allow edit of pagetab name via File>Edit tab name
+		-moved link files to "Tools" on tool strip menu
+
 5/13/2014
+	v. 2.0.0.7
+		-fixed toolbar links to datapack and qa server env
+	v. 2.0.0.7
+		-fixed issue with nJIRA populating test environment to summary line
+	v. 2.0.0.6
+		-testing auto update
 	v. 2.0.0.5
 		-added btn_evermore to frm_main.frm_nJira
 		-added string for automation test type to every JIRA project except MRECCMA

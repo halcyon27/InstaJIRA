@@ -58,9 +58,10 @@
 
         nServer = "" _
         & "&summary=[" & project & "]" & automationTest & "[" & langCode & "]+summary" _
-        & "%0Ddevice:+" & diNumber & "+(+" & deviceInfo & "+)" _
+        & "&environment=device:+" & diNumber & "+(+" & deviceInfo & "+)" _
         & "%0Dbuild+path:+" & buildPath & "" _
-        & "%0Dserver:+" & serverEnv & " (+" & software & "+)" _
+        & "%0Dbuild+version:+" & buildVersion & "" _
+        & "%0Dserver:+" & serverEnv & "+|+host:+" & host & " (+" & software & "+)" _
         & "&description=" _
         & "Test+source:+" & testSource _
         & "%0D%0DPRECONDITIONS%0Dalarms,+contacts,+fieldID..." _
@@ -72,9 +73,10 @@
 
         nClient = "" _
         & "&summary=[" & project & "]" & automationTest & "[" & langCode & "]+summary" _
-        & "%0Ddevice:+" & diNumber & "+(+" & deviceInfo & "+)" _
+        & "&environment=device:+" & diNumber & "+(+" & deviceInfo & "+)" _
         & "%0Dbuild+path:+" & buildPath & "" _
-        & "%0Dserver:+" & serverEnv & " (+" & software & "+)" _
+        & "%0Dbuild+version:+" & buildVersion & "" _
+        & "%0Dserver:+" & serverEnv & "+|+host:+" & host & " (+" & software & "+)" _
         & "&description=" _
         & "Test+source:+" & testSource _
         & "%0D%0DPRECONDITIONS%0Dalarms,+contacts,+fieldID..." _

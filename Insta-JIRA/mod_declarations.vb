@@ -13,6 +13,7 @@
     Public deviceOS As String
     Public deviceSeries As String
     Public diNumber As String
+    Public host As String
     Public hostUrl As String
     Public langCode As String
     Public langID As String

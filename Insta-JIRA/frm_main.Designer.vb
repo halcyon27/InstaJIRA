@@ -23,15 +23,24 @@ Partial Class frm_main
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.LinksToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditTabNamesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Tab1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Tab2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Tab3ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LinksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportABugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SharePointDeviceListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.DatapackMappingTableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ServerEnvForQAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InstaJIRAWikiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RevisionHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -61,7 +70,7 @@ Partial Class frm_main
         Me.tbx_software0 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.tbx_host0 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.lbl_host0 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cbx_serverEnv0 = New System.Windows.Forms.ComboBox()
         Me.gbx_apk0 = New System.Windows.Forms.GroupBox()
@@ -88,7 +97,7 @@ Partial Class frm_main
         Me.tbx_software1 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.tbx_host1 = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.lbl_Host1 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.cbx_serverEnv1 = New System.Windows.Forms.ComboBox()
         Me.gbx_apk1 = New System.Windows.Forms.GroupBox()
@@ -115,7 +124,7 @@ Partial Class frm_main
         Me.tbx_software2 = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.tbx_host2 = New System.Windows.Forms.TextBox()
-        Me.Label27 = New System.Windows.Forms.Label()
+        Me.lbl_host2 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.cbx_serverEnv2 = New System.Windows.Forms.ComboBox()
         Me.gbx_apk2 = New System.Windows.Forms.GroupBox()
@@ -156,19 +165,62 @@ Partial Class frm_main
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LinksToolStripMenuItem, Me.AboutToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LinksToolStripMenuItem1, Me.LinksToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(815, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
+        'LinksToolStripMenuItem1
+        '
+        Me.LinksToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditTabNamesToolStripMenuItem, Me.ToolStripSeparator4, Me.CloseToolStripMenuItem})
+        Me.LinksToolStripMenuItem1.Name = "LinksToolStripMenuItem1"
+        Me.LinksToolStripMenuItem1.Size = New System.Drawing.Size(37, 20)
+        Me.LinksToolStripMenuItem1.Text = "File"
+        '
+        'EditTabNamesToolStripMenuItem
+        '
+        Me.EditTabNamesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Tab1ToolStripMenuItem, Me.Tab2ToolStripMenuItem, Me.Tab3ToolStripMenuItem})
+        Me.EditTabNamesToolStripMenuItem.Name = "EditTabNamesToolStripMenuItem"
+        Me.EditTabNamesToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.EditTabNamesToolStripMenuItem.Text = "Edit tab names"
+        '
+        'Tab1ToolStripMenuItem
+        '
+        Me.Tab1ToolStripMenuItem.Name = "Tab1ToolStripMenuItem"
+        Me.Tab1ToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.Tab1ToolStripMenuItem.Text = "Tab 1"
+        '
+        'Tab2ToolStripMenuItem
+        '
+        Me.Tab2ToolStripMenuItem.Name = "Tab2ToolStripMenuItem"
+        Me.Tab2ToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.Tab2ToolStripMenuItem.Text = "Tab 2"
+        '
+        'Tab3ToolStripMenuItem
+        '
+        Me.Tab3ToolStripMenuItem.Name = "Tab3ToolStripMenuItem"
+        Me.Tab3ToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.Tab3ToolStripMenuItem.Text = "Tab 3"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(209, 6)
+        '
+        'CloseToolStripMenuItem
+        '
+        Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.CloseToolStripMenuItem.Text = "Close"
+        '
         'LinksToolStripMenuItem
         '
-        Me.LinksToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportABugToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.DatapackMappingTableToolStripMenuItem, Me.ServerEnvForQAToolStripMenuItem, Me.ToolStripSeparator1, Me.CloseToolStripMenuItem})
+        Me.LinksToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportABugToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripSeparator1, Me.SharePointDeviceListToolStripMenuItem, Me.ToolStripSeparator2, Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.ToolStripSeparator3, Me.DatapackMappingTableToolStripMenuItem, Me.ServerEnvForQAToolStripMenuItem})
         Me.LinksToolStripMenuItem.Name = "LinksToolStripMenuItem"
-        Me.LinksToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.LinksToolStripMenuItem.Text = "File"
+        Me.LinksToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
+        Me.LinksToolStripMenuItem.Text = "Tools"
         '
         'ReportABugToolStripMenuItem
         '
@@ -182,6 +234,22 @@ Partial Class frm_main
         Me.ToolStripMenuItem2.Size = New System.Drawing.Size(240, 22)
         Me.ToolStripMenuItem2.Text = "JIRA - Device Inventory"
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(237, 6)
+        '
+        'SharePointDeviceListToolStripMenuItem
+        '
+        Me.SharePointDeviceListToolStripMenuItem.Name = "SharePointDeviceListToolStripMenuItem"
+        Me.SharePointDeviceListToolStripMenuItem.Size = New System.Drawing.Size(240, 22)
+        Me.SharePointDeviceListToolStripMenuItem.Text = "SharePoint - Device List"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(237, 6)
+        '
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
@@ -194,6 +262,11 @@ Partial Class frm_main
         Me.ToolStripMenuItem4.Size = New System.Drawing.Size(240, 22)
         Me.ToolStripMenuItem4.Text = "Tool - NCS Config Viewer"
         '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(237, 6)
+        '
         'DatapackMappingTableToolStripMenuItem
         '
         Me.DatapackMappingTableToolStripMenuItem.Name = "DatapackMappingTableToolStripMenuItem"
@@ -205,17 +278,6 @@ Partial Class frm_main
         Me.ServerEnvForQAToolStripMenuItem.Name = "ServerEnvForQAToolStripMenuItem"
         Me.ServerEnvForQAToolStripMenuItem.Size = New System.Drawing.Size(240, 22)
         Me.ServerEnvForQAToolStripMenuItem.Text = "Wiki - Server Env for QA"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(237, 6)
-        '
-        'CloseToolStripMenuItem
-        '
-        Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(240, 22)
-        Me.CloseToolStripMenuItem.Text = "Close"
         '
         'AboutToolStripMenuItem
         '
@@ -464,7 +526,7 @@ Partial Class frm_main
         Me.gbx_server0.Controls.Add(Me.tbx_software0)
         Me.gbx_server0.Controls.Add(Me.Label7)
         Me.gbx_server0.Controls.Add(Me.tbx_host0)
-        Me.gbx_server0.Controls.Add(Me.Label8)
+        Me.gbx_server0.Controls.Add(Me.lbl_host0)
         Me.gbx_server0.Controls.Add(Me.Label6)
         Me.gbx_server0.Controls.Add(Me.cbx_serverEnv0)
         Me.gbx_server0.Location = New System.Drawing.Point(6, 168)
@@ -517,14 +579,14 @@ Partial Class frm_main
         Me.tbx_host0.Size = New System.Drawing.Size(297, 20)
         Me.tbx_host0.TabIndex = 12
         '
-        'Label8
+        'lbl_host0
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(241, 21)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(29, 13)
-        Me.Label8.TabIndex = 12
-        Me.Label8.Text = "Host"
+        Me.lbl_host0.AutoSize = True
+        Me.lbl_host0.Location = New System.Drawing.Point(241, 21)
+        Me.lbl_host0.Name = "lbl_host0"
+        Me.lbl_host0.Size = New System.Drawing.Size(29, 13)
+        Me.lbl_host0.TabIndex = 12
+        Me.lbl_host0.Text = "Host"
         '
         'Label6
         '
@@ -746,7 +808,7 @@ Partial Class frm_main
         Me.gbx_server1.Controls.Add(Me.tbx_software1)
         Me.gbx_server1.Controls.Add(Me.Label15)
         Me.gbx_server1.Controls.Add(Me.tbx_host1)
-        Me.gbx_server1.Controls.Add(Me.Label16)
+        Me.gbx_server1.Controls.Add(Me.lbl_Host1)
         Me.gbx_server1.Controls.Add(Me.Label17)
         Me.gbx_server1.Controls.Add(Me.cbx_serverEnv1)
         Me.gbx_server1.Location = New System.Drawing.Point(6, 168)
@@ -799,14 +861,14 @@ Partial Class frm_main
         Me.tbx_host1.Size = New System.Drawing.Size(297, 20)
         Me.tbx_host1.TabIndex = 13
         '
-        'Label16
+        'lbl_Host1
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(241, 21)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(29, 13)
-        Me.Label16.TabIndex = 12
-        Me.Label16.Text = "Host"
+        Me.lbl_Host1.AutoSize = True
+        Me.lbl_Host1.Location = New System.Drawing.Point(241, 21)
+        Me.lbl_Host1.Name = "lbl_Host1"
+        Me.lbl_Host1.Size = New System.Drawing.Size(29, 13)
+        Me.lbl_Host1.TabIndex = 12
+        Me.lbl_Host1.Text = "Host"
         '
         'Label17
         '
@@ -1023,7 +1085,7 @@ Partial Class frm_main
         Me.gbx_server2.Controls.Add(Me.tbx_software2)
         Me.gbx_server2.Controls.Add(Me.Label26)
         Me.gbx_server2.Controls.Add(Me.tbx_host2)
-        Me.gbx_server2.Controls.Add(Me.Label27)
+        Me.gbx_server2.Controls.Add(Me.lbl_host2)
         Me.gbx_server2.Controls.Add(Me.Label28)
         Me.gbx_server2.Controls.Add(Me.cbx_serverEnv2)
         Me.gbx_server2.Location = New System.Drawing.Point(6, 168)
@@ -1076,14 +1138,14 @@ Partial Class frm_main
         Me.tbx_host2.Size = New System.Drawing.Size(297, 20)
         Me.tbx_host2.TabIndex = 13
         '
-        'Label27
+        'lbl_host2
         '
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(241, 21)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(29, 13)
-        Me.Label27.TabIndex = 12
-        Me.Label27.Text = "Host"
+        Me.lbl_host2.AutoSize = True
+        Me.lbl_host2.Location = New System.Drawing.Point(241, 21)
+        Me.lbl_host2.Name = "lbl_host2"
+        Me.lbl_host2.Size = New System.Drawing.Size(29, 13)
+        Me.lbl_host2.TabIndex = 12
+        Me.lbl_host2.Text = "Host"
         '
         'Label28
         '
@@ -1341,7 +1403,7 @@ Partial Class frm_main
     Friend WithEvents tbx_software0 As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents tbx_host0 As System.Windows.Forms.TextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents lbl_host0 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents cbx_serverEnv0 As System.Windows.Forms.ComboBox
     Friend WithEvents rad_vlt As System.Windows.Forms.RadioButton
@@ -1360,7 +1422,7 @@ Partial Class frm_main
     Friend WithEvents tbx_software1 As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents tbx_host1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents lbl_Host1 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents cbx_serverEnv1 As System.Windows.Forms.ComboBox
     Friend WithEvents gbx_apk1 As System.Windows.Forms.GroupBox
@@ -1386,7 +1448,7 @@ Partial Class frm_main
     Friend WithEvents tbx_software2 As System.Windows.Forms.TextBox
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents tbx_host2 As System.Windows.Forms.TextBox
-    Friend WithEvents Label27 As System.Windows.Forms.Label
+    Friend WithEvents lbl_host2 As System.Windows.Forms.Label
     Friend WithEvents Label28 As System.Windows.Forms.Label
     Friend WithEvents cbx_serverEnv2 As System.Windows.Forms.ComboBox
     Friend WithEvents gbx_apk2 As System.Windows.Forms.GroupBox
@@ -1403,11 +1465,20 @@ Partial Class frm_main
     Friend WithEvents Label33 As System.Windows.Forms.Label
     Friend WithEvents DatapackMappingTableToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ServerEnvForQAToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents CloseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RevisionHistoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents gbx_deviceList As System.Windows.Forms.GroupBox
     Friend WithEvents btn_deviceList As System.Windows.Forms.Button
     Friend WithEvents ReportABugToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SharePointDeviceListToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LinksToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EditTabNamesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Tab1ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Tab2ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Tab3ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents CloseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
 
 End Class

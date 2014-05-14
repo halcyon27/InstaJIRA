@@ -23,6 +23,7 @@
         datapack = frm_main.tbx_datapack0.Text
         diNumber = frm_main.cbx_diNumber0.Text
         deviceInfo = frm_main.tbx_deviceInfo0.Text
+        host = frm_main.tbx_host0.Text
 
     End Sub
 
@@ -40,6 +41,7 @@
         datapack = frm_main.tbx_datapack1.Text
         diNumber = frm_main.cbx_diNumber1.Text
         deviceInfo = frm_main.tbx_deviceInfo1.Text
+        host = frm_main.tbx_host1.Text
 
     End Sub
 
@@ -57,6 +59,7 @@
         datapack = frm_main.tbx_datapack2.Text
         diNumber = frm_main.cbx_diNumber2.Text
         deviceInfo = frm_main.tbx_deviceInfo2.Text
+        host = frm_main.tbx_host2.Text
 
     End Sub
 

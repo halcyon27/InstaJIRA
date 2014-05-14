@@ -413,6 +413,42 @@ Namespace My
                 Me("saveDiNumber2") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property saveTabText0() As String
+            Get
+                Return CType(Me("saveTabText0"),String)
+            End Get
+            Set
+                Me("saveTabText0") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property saveTabText1() As String
+            Get
+                Return CType(Me("saveTabText1"),String)
+            End Get
+            Set
+                Me("saveTabText1") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property saveTabText2() As String
+            Get
+                Return CType(Me("saveTabText2"),String)
+            End Get
+            Set
+                Me("saveTabText2") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

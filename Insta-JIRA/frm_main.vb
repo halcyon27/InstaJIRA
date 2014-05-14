@@ -12,6 +12,7 @@
     Dim saveDatapack0, saveDatapack1, saveDatapack2 As String
     Dim saveDiNumber0, saveDiNumber1, saveDiNumber2 As String
     Dim saveDeviceInfo0, saveDeviceInfo1, saveDeviceInfo2 As String
+    Dim saveTabText0, saveTabText1, saveTabText2 As String
 
     Private Sub btn_nJira_Click(sender As System.Object, e As System.EventArgs) Handles btn_nJira.Click
 
@@ -41,6 +42,7 @@
             .saveDatapack0 = Me.tbx_datapack0.Text
             .saveDiNumber0 = Me.cbx_diNumber0.Text
             '.saveDeviceInfo0 = Me.tbx_deviceInfo0.Text
+            .saveTabText0 = Me.TabPage0.Text
             'TAB TWO
             .saveProject1 = Me.cbx_project1.Text
             .saveLanguage1 = Me.cbx_language1.Text
@@ -53,6 +55,7 @@
             .saveDatapack1 = Me.tbx_datapack1.Text
             .saveDiNumber1 = Me.cbx_diNumber1.Text
             '.saveDeviceInfo1 = Me.tbx_deviceInfo1.Text
+            .saveTabText1 = Me.TabPage1.Text
             'TAB THREE
             .saveProject2 = Me.cbx_project2.Text
             .saveLanguage2 = Me.cbx_language2.Text
@@ -65,6 +68,7 @@
             .saveDatapack2 = Me.tbx_datapack2.Text
             .saveDiNumber2 = Me.cbx_diNumber2.Text
             '.saveDeviceInfo2 = Me.tbx_deviceInfo2.Text
+            .saveTabText2 = Me.TabPage2.Text
         End With
 
     End Sub
@@ -79,43 +83,64 @@
 
         'RESTORED SAVED SETTINGS
         'TAB ONE
-        Me.cbx_project0.Text = My.Settings.saveProject0
-        Me.cbx_language0.Text = My.Settings.saveLanguage0
-        Me.tbx_testSource0.Text = My.Settings.saveTestSource0
-        Me.tbx_buildPath0.Text = My.Settings.saveBuildPath0
-        Me.tbx_buildVersion0.Text = My.Settings.saveBuildVersion0
-        Me.cbx_serverEnv0.Text = My.Settings.saveServerEnv0
-        'Me.tbx_host0.Text = My.Settings.saveHost0
-        'Me.tbx_software0.Text = My.Settings.saveSoftware0
-        Me.tbx_datapack0.Text = My.Settings.saveDatapack0
-        Me.cbx_diNumber0.Text = My.Settings.saveDiNumber0
-        'Me.tbx_deviceInfo0.Text = My.Settings.saveDeviceInfo0
+        With My.Settings
+            Me.cbx_project0.Text = .saveProject0
+            Me.cbx_language0.Text = .saveLanguage0
+            Me.tbx_testSource0.Text = .saveTestSource0
+            Me.tbx_buildPath0.Text = .saveBuildPath0
+            Me.tbx_buildVersion0.Text = .saveBuildVersion0
+            Me.cbx_serverEnv0.Text = .saveServerEnv0
+            'Me.tbx_host0.Text = .saveHost0
+            'Me.tbx_software0.Text = .saveSoftware0
+            Me.tbx_datapack0.Text = .saveDatapack0
+            Me.cbx_diNumber0.Text = .saveDiNumber0
+            'Me.tbx_deviceInfo0.Text = .saveDeviceInfo0
+            If .saveTabText0 = "" Then
+                .saveTabText0 = "Test Environment 1"
+                Me.TabPage0.Text = .saveTabText0
+            Else
+                Me.TabPage0.Text = .saveTabText0
+            End If
 
-        'TAB TWO
-        Me.cbx_project1.Text = My.Settings.saveProject1
-        Me.cbx_language1.Text = My.Settings.saveLanguage1
-        Me.tbx_testSource1.Text = My.Settings.saveTestSource1
-        Me.tbx_buildPath1.Text = My.Settings.saveBuildPath1
-        Me.tbx_buildVersion1.Text = My.Settings.saveBuildVersion1
-        Me.cbx_serverEnv1.Text = My.Settings.saveServerEnv1
-        'Me.tbx_host1.Text = My.Settings.saveHost1
-        'Me.tbx_software1.Text = My.Settings.saveSoftware1
-        Me.tbx_datapack1.Text = My.Settings.saveDatapack1
-        Me.cbx_diNumber1.Text = My.Settings.saveDiNumber1
-        'Me.tbx_deviceInfo1.Text = My.Settings.saveDeviceInfo1
+            'TAB TWO
+            Me.cbx_project1.Text = .saveProject1
+            Me.cbx_language1.Text = .saveLanguage1
+            Me.tbx_testSource1.Text = .saveTestSource1
+            Me.tbx_buildPath1.Text = .saveBuildPath1
+            Me.tbx_buildVersion1.Text = .saveBuildVersion1
+            Me.cbx_serverEnv1.Text = .saveServerEnv1
+            'Me.tbx_host1.Text = .saveHost1
+            'Me.tbx_software1.Text = .saveSoftware1
+            Me.tbx_datapack1.Text = .saveDatapack1
+            Me.cbx_diNumber1.Text = .saveDiNumber1
+            'Me.tbx_deviceInfo1.Text = .saveDeviceInfo1
+            If .saveTabText1 = "" Then
+                .saveTabText1 = "Test Environment 2"
+                Me.TabPage1.Text = .saveTabText1
+            Else
+                Me.TabPage1.Text = .saveTabText1
+            End If
 
-        'TAB THREE
-        Me.cbx_project2.Text = My.Settings.saveProject2
-        Me.cbx_language2.Text = My.Settings.saveLanguage2
-        Me.tbx_testSource2.Text = My.Settings.saveTestSource2
-        Me.tbx_buildPath2.Text = My.Settings.saveBuildPath2
-        Me.tbx_buildVersion2.Text = My.Settings.saveBuildVersion2
-        Me.cbx_serverEnv2.Text = My.Settings.saveServerEnv2
-        'Me.tbx_host2.Text = My.Settings.saveHost2
-        'Me.tbx_software2.Text = My.Settings.saveSoftware2
-        Me.tbx_datapack2.Text = My.Settings.saveDatapack2
-        Me.cbx_diNumber2.Text = My.Settings.saveDiNumber2
-        'Me.tbx_deviceInfo2.Text = My.Settings.saveDeviceInfo2
+            'TAB THREE
+            Me.cbx_project2.Text = .saveProject2
+            Me.cbx_language2.Text = .saveLanguage2
+            Me.tbx_testSource2.Text = .saveTestSource2
+            Me.tbx_buildPath2.Text = .saveBuildPath2
+            Me.tbx_buildVersion2.Text = .saveBuildVersion2
+            Me.cbx_serverEnv2.Text = .saveServerEnv2
+            'Me.tbx_host2.Text = .saveHost2
+            'Me.tbx_software2.Text = .saveSoftware2
+            Me.tbx_datapack2.Text = .saveDatapack2
+            Me.cbx_diNumber2.Text = .saveDiNumber2
+            'Me.tbx_deviceInfo2.Text = .saveDeviceInfo2
+            If .saveTabText2 = "" Then
+                .saveTabText2 = "Test Environment 3"
+                Me.TabPage2.Text = .saveTabText2
+            Else
+                Me.TabPage2.Text = .saveTabText2
+            End If
+        End With
+
 
         'populate comboboxes on frm_main--future work link to data source
         With Me.cbx_language0.Items
@@ -282,9 +307,6 @@
             .Add("VLINGO DEMO")
         End With
 
-        'select "Manual" radio button
-        'Me.rad_manual.Checked = True
-
         'populate device combobox on frm_main from xml
         Call getDeviceInfo()
 
@@ -312,7 +334,7 @@
 
     End Sub
 
-    Private Sub CloseToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CloseToolStripMenuItem.Click
+    Private Sub CloseToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs)
 
         Me.Close()
 
@@ -382,6 +404,81 @@
         'report bug with Insta JIRA
         Process.Start("http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=12110&issuetype=1&components=14643&summary=[InstaJIRA v." _
                       & Application.ProductVersion & "]+enter%20summary&description=describe+the+error%0Dpaste+the+error+text+or+attach+a+screenshot+if+necessary%0D%0Dassign+to+aden+williamson")
+
+    End Sub
+
+    Private Sub DatapackMappingTableToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles DatapackMappingTableToolStripMenuItem.Click
+
+        Process.Start("http://wiki.vlingo.com/display/QA/Datapack+Mapping+Table")
+
+    End Sub
+
+    Private Sub ServerEnvForQAToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ServerEnvForQAToolStripMenuItem.Click
+
+        Process.Start("http://wiki.vlingo.com/display/PM/Server+Environments+for+QA+Language+Testers")
+
+    End Sub
+
+    Private Sub SharePointDeviceListToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles SharePointDeviceListToolStripMenuItem.Click
+
+        Process.Start("http://inside.nuance.com/mobility/QACollab/Shared%20Documents/Client%20QA%20-%20Common%20Resources/Testing%20Resources/Device%20Inventory%20List/")
+
+    End Sub
+
+    Private Sub Tab1ToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles Tab1ToolStripMenuItem.Click
+
+        Me.TabPage0.Text = InputBox("Enter new title for tab 1", , "Test Environment 1")
+        If Me.TabPage0.Text = "" Then Me.TabPage0.Text = "Test Environment 1"
+
+    End Sub
+
+    Private Sub Tab2ToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles Tab2ToolStripMenuItem.Click
+
+        Me.TabPage1.Text = InputBox("Enter new title for tab 2", , "Test Environment 2")
+        If Me.TabPage1.Text = "" Then Me.TabPage1.Text = "Test Environment 2"
+
+    End Sub
+
+    Private Sub Tab3ToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles Tab3ToolStripMenuItem.Click
+
+        Me.TabPage2.Text = InputBox("Enter new title for tab 3", , "Test Environment 3")
+        If Me.TabPage2.Text = "" Then Me.TabPage2.Text = "Test Environment 3"
+
+    End Sub
+
+    Private Sub lbl_host0_MouseDoubleClick(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles lbl_host0.MouseDoubleClick
+
+        With Me.tbx_host0
+            If .Enabled = False Then
+                .Enabled = True
+            Else
+                .Enabled = False
+            End If
+        End With
+
+    End Sub
+
+    Private Sub lbl_Host1_Click(sender As System.Object, e As System.EventArgs) Handles lbl_Host1.Click
+
+        With Me.tbx_host1
+            If .Enabled = False Then
+                .Enabled = True
+            Else
+                .Enabled = False
+            End If
+        End With
+
+    End Sub
+
+    Private Sub lbl_host2_Click(sender As System.Object, e As System.EventArgs) Handles lbl_host2.Click
+
+        With Me.tbx_host2
+            If .Enabled = False Then
+                .Enabled = True
+            Else
+                .Enabled = False
+            End If
+        End With
 
     End Sub
 End Class
