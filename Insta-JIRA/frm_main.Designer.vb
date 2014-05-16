@@ -61,7 +61,7 @@ Partial Class frm_main
         Me.TabPage0 = New System.Windows.Forms.TabPage()
         Me.gbx_device0 = New System.Windows.Forms.GroupBox()
         Me.tbx_deviceInfo0 = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.lbl_deviceInfo0 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.cbx_diNumber0 = New System.Windows.Forms.ComboBox()
         Me.gbx_server0 = New System.Windows.Forms.GroupBox()
@@ -88,7 +88,7 @@ Partial Class frm_main
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.gbx_device1 = New System.Windows.Forms.GroupBox()
         Me.tbx_deviceInfo1 = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.lbl_deviceInfo1 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.cbx_diNumber1 = New System.Windows.Forms.ComboBox()
         Me.gbx_server1 = New System.Windows.Forms.GroupBox()
@@ -115,7 +115,7 @@ Partial Class frm_main
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.gbx_device2 = New System.Windows.Forms.GroupBox()
         Me.tbx_deviceInfo2 = New System.Windows.Forms.TextBox()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.lbl_deviceInfo2 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.cbx_diNumber2 = New System.Windows.Forms.ComboBox()
         Me.gbx_server2 = New System.Windows.Forms.GroupBox()
@@ -183,7 +183,7 @@ Partial Class frm_main
         '
         Me.EditTabNamesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Tab1ToolStripMenuItem, Me.Tab2ToolStripMenuItem, Me.Tab3ToolStripMenuItem})
         Me.EditTabNamesToolStripMenuItem.Name = "EditTabNamesToolStripMenuItem"
-        Me.EditTabNamesToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.EditTabNamesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EditTabNamesToolStripMenuItem.Text = "Edit tab names"
         '
         'Tab1ToolStripMenuItem
@@ -207,12 +207,12 @@ Partial Class frm_main
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(209, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(149, 6)
         '
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
         'LinksToolStripMenuItem
@@ -470,7 +470,7 @@ Partial Class frm_main
         'gbx_device0
         '
         Me.gbx_device0.Controls.Add(Me.tbx_deviceInfo0)
-        Me.gbx_device0.Controls.Add(Me.Label12)
+        Me.gbx_device0.Controls.Add(Me.lbl_deviceInfo0)
         Me.gbx_device0.Controls.Add(Me.Label10)
         Me.gbx_device0.Controls.Add(Me.cbx_diNumber0)
         Me.gbx_device0.Location = New System.Drawing.Point(6, 278)
@@ -489,14 +489,14 @@ Partial Class frm_main
         Me.tbx_deviceInfo0.Size = New System.Drawing.Size(297, 20)
         Me.tbx_deviceInfo0.TabIndex = 14
         '
-        'Label12
+        'lbl_deviceInfo0
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(241, 21)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(61, 13)
-        Me.Label12.TabIndex = 16
-        Me.Label12.Text = "Device info"
+        Me.lbl_deviceInfo0.AutoSize = True
+        Me.lbl_deviceInfo0.Location = New System.Drawing.Point(241, 21)
+        Me.lbl_deviceInfo0.Name = "lbl_deviceInfo0"
+        Me.lbl_deviceInfo0.Size = New System.Drawing.Size(61, 13)
+        Me.lbl_deviceInfo0.TabIndex = 16
+        Me.lbl_deviceInfo0.Text = "Device info"
         '
         'Label10
         '
@@ -752,7 +752,7 @@ Partial Class frm_main
         '
         Me.gbx_device1.BackColor = System.Drawing.SystemColors.Control
         Me.gbx_device1.Controls.Add(Me.tbx_deviceInfo1)
-        Me.gbx_device1.Controls.Add(Me.Label11)
+        Me.gbx_device1.Controls.Add(Me.lbl_deviceInfo1)
         Me.gbx_device1.Controls.Add(Me.Label13)
         Me.gbx_device1.Controls.Add(Me.cbx_diNumber1)
         Me.gbx_device1.Location = New System.Drawing.Point(6, 278)
@@ -771,14 +771,14 @@ Partial Class frm_main
         Me.tbx_deviceInfo1.Size = New System.Drawing.Size(297, 20)
         Me.tbx_deviceInfo1.TabIndex = 17
         '
-        'Label11
+        'lbl_deviceInfo1
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(241, 21)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(61, 13)
-        Me.Label11.TabIndex = 16
-        Me.Label11.Text = "Device info"
+        Me.lbl_deviceInfo1.AutoSize = True
+        Me.lbl_deviceInfo1.Location = New System.Drawing.Point(241, 21)
+        Me.lbl_deviceInfo1.Name = "lbl_deviceInfo1"
+        Me.lbl_deviceInfo1.Size = New System.Drawing.Size(61, 13)
+        Me.lbl_deviceInfo1.TabIndex = 16
+        Me.lbl_deviceInfo1.Text = "Device info"
         '
         'Label13
         '
@@ -1029,7 +1029,7 @@ Partial Class frm_main
         '
         Me.gbx_device2.BackColor = System.Drawing.SystemColors.Control
         Me.gbx_device2.Controls.Add(Me.tbx_deviceInfo2)
-        Me.gbx_device2.Controls.Add(Me.Label23)
+        Me.gbx_device2.Controls.Add(Me.lbl_deviceInfo2)
         Me.gbx_device2.Controls.Add(Me.Label24)
         Me.gbx_device2.Controls.Add(Me.cbx_diNumber2)
         Me.gbx_device2.Location = New System.Drawing.Point(6, 278)
@@ -1048,14 +1048,14 @@ Partial Class frm_main
         Me.tbx_deviceInfo2.Size = New System.Drawing.Size(297, 20)
         Me.tbx_deviceInfo2.TabIndex = 17
         '
-        'Label23
+        'lbl_deviceInfo2
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(241, 21)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(61, 13)
-        Me.Label23.TabIndex = 16
-        Me.Label23.Text = "Device info"
+        Me.lbl_deviceInfo2.AutoSize = True
+        Me.lbl_deviceInfo2.Location = New System.Drawing.Point(241, 21)
+        Me.lbl_deviceInfo2.Name = "lbl_deviceInfo2"
+        Me.lbl_deviceInfo2.Size = New System.Drawing.Size(61, 13)
+        Me.lbl_deviceInfo2.TabIndex = 16
+        Me.lbl_deviceInfo2.Text = "Device info"
         '
         'Label24
         '
@@ -1395,7 +1395,7 @@ Partial Class frm_main
     Friend WithEvents cbx_project0 As System.Windows.Forms.ComboBox
     Friend WithEvents tbx_testSource0 As System.Windows.Forms.TextBox
     Friend WithEvents gbx_device0 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents lbl_deviceInfo0 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents cbx_diNumber0 As System.Windows.Forms.ComboBox
     Friend WithEvents tbx_datapack0 As System.Windows.Forms.TextBox
@@ -1413,7 +1413,7 @@ Partial Class frm_main
     Friend WithEvents tbx_deviceInfo0 As System.Windows.Forms.TextBox
     Friend WithEvents gbx_device1 As System.Windows.Forms.GroupBox
     Friend WithEvents tbx_deviceInfo1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents lbl_deviceInfo1 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents cbx_diNumber1 As System.Windows.Forms.ComboBox
     Friend WithEvents gbx_server1 As System.Windows.Forms.GroupBox
@@ -1439,7 +1439,7 @@ Partial Class frm_main
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents gbx_device2 As System.Windows.Forms.GroupBox
     Friend WithEvents tbx_deviceInfo2 As System.Windows.Forms.TextBox
-    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents lbl_deviceInfo2 As System.Windows.Forms.Label
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents cbx_diNumber2 As System.Windows.Forms.ComboBox
     Friend WithEvents gbx_server2 As System.Windows.Forms.GroupBox

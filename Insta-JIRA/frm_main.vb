@@ -481,4 +481,40 @@
         End With
 
     End Sub
+
+    Private Sub lbl_deviceInfo0_Click(sender As System.Object, e As System.EventArgs) Handles lbl_deviceInfo0.Click
+
+        With Me.tbx_deviceInfo0
+            If .Enabled = False Then
+                .Enabled = True
+            Else
+                .Enabled = False
+            End If
+        End With
+
+    End Sub
+
+    Private Sub lbl_deviceInfo1_Click(sender As System.Object, e As System.EventArgs) Handles lbl_deviceInfo1.Click
+
+        With Me.tbx_deviceInfo1
+            If .Enabled = False Then
+                .Enabled = True
+            Else
+                .Enabled = False
+            End If
+        End With
+
+    End Sub
+
+    Private Sub lbl_deviceInfo2_Click(sender As System.Object, e As System.EventArgs) Handles lbl_deviceInfo2.Click
+
+        With Me.tbx_deviceInfo2
+            If .Enabled = False Then
+                .Enabled = True
+            Else
+                .Enabled = False
+            End If
+        End With
+
+    End Sub
 End Class

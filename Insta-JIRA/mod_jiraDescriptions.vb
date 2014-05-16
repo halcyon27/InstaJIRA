@@ -18,7 +18,7 @@
         & "%0Ddevice:+" & diNumber & "+(+" & deviceInfo & "+)" _
         & "%0Dbuild+version:+" & buildVersion _
         & "%0Dbuild+path:+" & buildPath _
-        & "%0Dserver:+" & serverEnv & " (+" & software & ")" & additionalInfo _
+        & "%0Dserver:+" & serverEnv & " (+" & software & "+)" & additionalInfo _
         & "%0D%0DPRECONDITIONS%0Dalarms,+contacts,+fieldID..." _
         & "%0D%0DDESCRIPTION" _
         & "%0D%0D*REPRODUCE*%0D{quote}%0Dadd%0Dsteps%0D{quote}" _
@@ -34,7 +34,7 @@
         & "%0Ddevice:+" & diNumber & "+(+" & deviceInfo & "+)" _
        & "%0Dbuild+version:+" & buildVersion _
        & "%0Dbuild+path:+" & buildPath _
-       & "%0Dserver:+" & serverEnv & " (+" & software & ")" & additionalInfo _
+       & "%0Dserver:+" & serverEnv & " (+" & software & "+)" & additionalInfo _
        & "%0D%0DPRECONDITIONS%0Dalarms,+contacts,+fieldID..." _
        & "%0D%0DDESCRIPTION" _
        & "%0D%0D*REPRODUCE*%0D{quote}%0Dadd%0Dsteps%0D{quote}" _

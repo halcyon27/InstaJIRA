@@ -7,6 +7,10 @@ future-->move frm_main variables to external xml
 future-->move serverEnv to external xml
 future-->checks version of external xmls every three hours and imports file if updated
 
+5/16/2014
+	v 2.0.0.12
+		- updated nClient, nServer description
+		- made deviceInfo textbox accessible (via doubleclick of label)
 5/14/2014
 	v. 2.0.0.10, 11
 		-fix issue where tabpage text is blank on load
