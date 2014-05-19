@@ -697,6 +697,51 @@ ErrHandler3:
 
     End Sub
 
+    Public Sub VVSDM()
+
+        Call setActiveTab()
+        Call descriptions()
+        Call vlLanguages_1()
+        Call vlPlatforms_1()
+
+        ''block user from non-compatible project
+        If project = "Blackdog" Then GoTo ErrHandler1
+        If project = "CEC" Then GoTo ErrHandler1
+        If project = "DMA" Then GoTo ErrHandler1
+        If project = "Evermore" Then GoTo ErrHandler1
+        If project Like "LGEVM*" Then GoTo ErrHandler1
+
+        ''block user from creating bugs for non-compatible server
+        If serverEnv Like "MTL*" Or serverEnv Like "CVT*" Then GoTo ErrHandler2
+
+        ''build url
+        url = "http://jira.vlingo.com/secure/CreateIssueDetails!init.jspa?pid=10267" _
+        & "&issuetype=1" _
+        & "&summary=[" & project & "]" & automationTest & "[" & language & "]+summary" _
+        & "&priority=3" _
+        & "&customfield_10220=10420" _
+        & "&components=11440" _
+        & "&customfield_10251=" & platform & "" _
+        & "&customfield_10250=" & langID & "" _
+        & "&description=" & vlServer
+
+        On Error GoTo ErrHandler3
+        Process.Start(url)
+
+        Exit Sub
+
+ErrHandler1:
+        MsgBox("Jira type not compatible with project selected.")
+        Exit Sub
+ErrHandler2:
+        MsgBox("Project not compatible with server selected.")
+        Exit Sub
+ErrHandler3:
+        MsgBox("There was an issue opening the Jira URL.")
+        Exit Sub
+
+    End Sub
+
     Public Sub VVSCFG()
 
         Call setActiveTab()

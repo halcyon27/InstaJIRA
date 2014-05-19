@@ -39,6 +39,7 @@ Partial Class frm_vJIRA
         Me.btn_mreccma = New System.Windows.Forms.Button()
         Me.btn_asrSciTxtNrm = New System.Windows.Forms.Button()
         Me.btn_asrSciTagging = New System.Windows.Forms.Button()
+        Me.btn_vvsDm = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -51,7 +52,7 @@ Partial Class frm_vJIRA
         Me.GroupBox3.Controls.Add(Me.btn_stze)
         Me.GroupBox3.Location = New System.Drawing.Point(323, 11)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(100, 215)
+        Me.GroupBox3.Size = New System.Drawing.Size(100, 213)
         Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Customer"
@@ -94,7 +95,7 @@ Partial Class frm_vJIRA
         Me.GroupBox2.Controls.Add(Me.btn_blackdog)
         Me.GroupBox2.Location = New System.Drawing.Point(117, 11)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(200, 215)
+        Me.GroupBox2.Size = New System.Drawing.Size(200, 213)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Client"
@@ -164,13 +165,14 @@ Partial Class frm_vJIRA
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btn_vvsDm)
         Me.GroupBox1.Controls.Add(Me.btn_vvscfg)
         Me.GroupBox1.Controls.Add(Me.btn_mreccma)
         Me.GroupBox1.Controls.Add(Me.btn_asrSciTxtNrm)
         Me.GroupBox1.Controls.Add(Me.btn_asrSciTagging)
         Me.GroupBox1.Location = New System.Drawing.Point(11, 11)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(100, 215)
+        Me.GroupBox1.Size = New System.Drawing.Size(100, 213)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Server"
@@ -211,11 +213,20 @@ Partial Class frm_vJIRA
         Me.btn_asrSciTagging.Text = "ASR SCI [Tagging]"
         Me.btn_asrSciTagging.UseVisualStyleBackColor = True
         '
+        'btn_vvsDm
+        '
+        Me.btn_vvsDm.Location = New System.Drawing.Point(6, 175)
+        Me.btn_vvsDm.Name = "btn_vvsDm"
+        Me.btn_vvsDm.Size = New System.Drawing.Size(90, 26)
+        Me.btn_vvsDm.TabIndex = 7
+        Me.btn_vvsDm.Text = "VVS [DM]"
+        Me.btn_vvsDm.UseVisualStyleBackColor = True
+        '
         'frm_vJIRA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(434, 237)
+        Me.ClientSize = New System.Drawing.Size(434, 233)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -246,4 +257,5 @@ Partial Class frm_vJIRA
     Friend WithEvents btn_saq As System.Windows.Forms.Button
     Friend WithEvents btn_nac As System.Windows.Forms.Button
     Friend WithEvents btn_lgeVm As System.Windows.Forms.Button
+    Friend WithEvents btn_vvsDm As System.Windows.Forms.Button
 End Class

@@ -7,6 +7,11 @@ future-->move frm_main variables to external xml
 future-->move serverEnv to external xml
 future-->checks version of external xmls every three hours and imports file if updated
 
+5/19/2014
+	v 2.0.0.13
+		-added VVS JIRA project
+		-changed Datapack label to link on frm_main
+
 5/16/2014
 	v 2.0.0.12
 		- updated nClient, nServer description

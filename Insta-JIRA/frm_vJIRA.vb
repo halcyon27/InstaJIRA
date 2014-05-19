@@ -101,4 +101,11 @@
         Call STZE()
 
     End Sub
+
+    Private Sub btn_vvsDm_Click(sender As System.Object, e As System.EventArgs) Handles btn_vvsDm.Click
+
+        Me.Close()
+        Call VVSDM()
+
+    End Sub
 End Class

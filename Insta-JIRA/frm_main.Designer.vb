@@ -66,7 +66,6 @@ Partial Class frm_main
         Me.cbx_diNumber0 = New System.Windows.Forms.ComboBox()
         Me.gbx_server0 = New System.Windows.Forms.GroupBox()
         Me.tbx_datapack0 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.tbx_software0 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.tbx_host0 = New System.Windows.Forms.TextBox()
@@ -93,7 +92,6 @@ Partial Class frm_main
         Me.cbx_diNumber1 = New System.Windows.Forms.ComboBox()
         Me.gbx_server1 = New System.Windows.Forms.GroupBox()
         Me.tbx_datapack1 = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.tbx_software1 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.tbx_host1 = New System.Windows.Forms.TextBox()
@@ -120,7 +118,6 @@ Partial Class frm_main
         Me.cbx_diNumber2 = New System.Windows.Forms.ComboBox()
         Me.gbx_server2 = New System.Windows.Forms.GroupBox()
         Me.tbx_datapack2 = New System.Windows.Forms.TextBox()
-        Me.Label25 = New System.Windows.Forms.Label()
         Me.tbx_software2 = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.tbx_host2 = New System.Windows.Forms.TextBox()
@@ -141,6 +138,9 @@ Partial Class frm_main
         Me.Label33 = New System.Windows.Forms.Label()
         Me.gbx_deviceList = New System.Windows.Forms.GroupBox()
         Me.btn_deviceList = New System.Windows.Forms.Button()
+        Me.llbl_datapack0 = New System.Windows.Forms.LinkLabel()
+        Me.llbl_datapack1 = New System.Windows.Forms.LinkLabel()
+        Me.llbl_datapack2 = New System.Windows.Forms.LinkLabel()
         Me.MenuStrip1.SuspendLayout()
         Me.gbx_controls.SuspendLayout()
         Me.gbx_automation.SuspendLayout()
@@ -521,8 +521,8 @@ Partial Class frm_main
         '
         'gbx_server0
         '
+        Me.gbx_server0.Controls.Add(Me.llbl_datapack0)
         Me.gbx_server0.Controls.Add(Me.tbx_datapack0)
-        Me.gbx_server0.Controls.Add(Me.Label9)
         Me.gbx_server0.Controls.Add(Me.tbx_software0)
         Me.gbx_server0.Controls.Add(Me.Label7)
         Me.gbx_server0.Controls.Add(Me.tbx_host0)
@@ -543,15 +543,6 @@ Partial Class frm_main
         Me.tbx_datapack0.Name = "tbx_datapack0"
         Me.tbx_datapack0.Size = New System.Drawing.Size(513, 20)
         Me.tbx_datapack0.TabIndex = 14
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 74)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(54, 13)
-        Me.Label9.TabIndex = 16
-        Me.Label9.Text = "Datapack"
         '
         'tbx_software0
         '
@@ -803,8 +794,8 @@ Partial Class frm_main
         'gbx_server1
         '
         Me.gbx_server1.BackColor = System.Drawing.SystemColors.Control
+        Me.gbx_server1.Controls.Add(Me.llbl_datapack1)
         Me.gbx_server1.Controls.Add(Me.tbx_datapack1)
-        Me.gbx_server1.Controls.Add(Me.Label14)
         Me.gbx_server1.Controls.Add(Me.tbx_software1)
         Me.gbx_server1.Controls.Add(Me.Label15)
         Me.gbx_server1.Controls.Add(Me.tbx_host1)
@@ -825,15 +816,6 @@ Partial Class frm_main
         Me.tbx_datapack1.Name = "tbx_datapack1"
         Me.tbx_datapack1.Size = New System.Drawing.Size(513, 20)
         Me.tbx_datapack1.TabIndex = 17
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(6, 74)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(54, 13)
-        Me.Label14.TabIndex = 16
-        Me.Label14.Text = "Datapack"
         '
         'tbx_software1
         '
@@ -1080,8 +1062,8 @@ Partial Class frm_main
         'gbx_server2
         '
         Me.gbx_server2.BackColor = System.Drawing.SystemColors.Control
+        Me.gbx_server2.Controls.Add(Me.llbl_datapack2)
         Me.gbx_server2.Controls.Add(Me.tbx_datapack2)
-        Me.gbx_server2.Controls.Add(Me.Label25)
         Me.gbx_server2.Controls.Add(Me.tbx_software2)
         Me.gbx_server2.Controls.Add(Me.Label26)
         Me.gbx_server2.Controls.Add(Me.tbx_host2)
@@ -1102,15 +1084,6 @@ Partial Class frm_main
         Me.tbx_datapack2.Name = "tbx_datapack2"
         Me.tbx_datapack2.Size = New System.Drawing.Size(513, 20)
         Me.tbx_datapack2.TabIndex = 17
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(6, 74)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(54, 13)
-        Me.Label25.TabIndex = 16
-        Me.Label25.Text = "Datapack"
         '
         'tbx_software2
         '
@@ -1307,6 +1280,36 @@ Partial Class frm_main
         Me.btn_deviceList.Text = "Device List"
         Me.btn_deviceList.UseVisualStyleBackColor = True
         '
+        'llbl_datapack0
+        '
+        Me.llbl_datapack0.AutoSize = True
+        Me.llbl_datapack0.Location = New System.Drawing.Point(6, 75)
+        Me.llbl_datapack0.Name = "llbl_datapack0"
+        Me.llbl_datapack0.Size = New System.Drawing.Size(54, 13)
+        Me.llbl_datapack0.TabIndex = 17
+        Me.llbl_datapack0.TabStop = True
+        Me.llbl_datapack0.Text = "Datapack"
+        '
+        'llbl_datapack1
+        '
+        Me.llbl_datapack1.AutoSize = True
+        Me.llbl_datapack1.Location = New System.Drawing.Point(6, 75)
+        Me.llbl_datapack1.Name = "llbl_datapack1"
+        Me.llbl_datapack1.Size = New System.Drawing.Size(54, 13)
+        Me.llbl_datapack1.TabIndex = 18
+        Me.llbl_datapack1.TabStop = True
+        Me.llbl_datapack1.Text = "Datapack"
+        '
+        'llbl_datapack2
+        '
+        Me.llbl_datapack2.AutoSize = True
+        Me.llbl_datapack2.Location = New System.Drawing.Point(6, 75)
+        Me.llbl_datapack2.Name = "llbl_datapack2"
+        Me.llbl_datapack2.Size = New System.Drawing.Size(54, 13)
+        Me.llbl_datapack2.TabIndex = 18
+        Me.llbl_datapack2.TabStop = True
+        Me.llbl_datapack2.Text = "Datapack"
+        '
         'frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1399,7 +1402,6 @@ Partial Class frm_main
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents cbx_diNumber0 As System.Windows.Forms.ComboBox
     Friend WithEvents tbx_datapack0 As System.Windows.Forms.TextBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents tbx_software0 As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents tbx_host0 As System.Windows.Forms.TextBox
@@ -1418,7 +1420,6 @@ Partial Class frm_main
     Friend WithEvents cbx_diNumber1 As System.Windows.Forms.ComboBox
     Friend WithEvents gbx_server1 As System.Windows.Forms.GroupBox
     Friend WithEvents tbx_datapack1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents tbx_software1 As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents tbx_host1 As System.Windows.Forms.TextBox
@@ -1444,7 +1445,6 @@ Partial Class frm_main
     Friend WithEvents cbx_diNumber2 As System.Windows.Forms.ComboBox
     Friend WithEvents gbx_server2 As System.Windows.Forms.GroupBox
     Friend WithEvents tbx_datapack2 As System.Windows.Forms.TextBox
-    Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents tbx_software2 As System.Windows.Forms.TextBox
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents tbx_host2 As System.Windows.Forms.TextBox
@@ -1480,5 +1480,8 @@ Partial Class frm_main
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents llbl_datapack0 As System.Windows.Forms.LinkLabel
+    Friend WithEvents llbl_datapack1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents llbl_datapack2 As System.Windows.Forms.LinkLabel
 
 End Class

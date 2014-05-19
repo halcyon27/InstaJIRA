@@ -517,4 +517,22 @@
         End With
 
     End Sub
+
+    Private Sub llbl_datapack_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles llbl_datapack0.LinkClicked
+
+        Process.Start("http://wiki.vlingo.com/display/QA/Datapack+Mapping+Table")
+
+    End Sub
+
+    Private Sub llbl_datapack2_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles llbl_datapack2.LinkClicked
+
+        Process.Start("http://wiki.vlingo.com/display/QA/Datapack+Mapping+Table")
+
+    End Sub
+
+    Private Sub llbl_datapack1_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles llbl_datapack1.LinkClicked
+
+        Process.Start("http://wiki.vlingo.com/display/QA/Datapack+Mapping+Table")
+
+    End Sub
 End Class
